@@ -1,0 +1,13 @@
+.topnav {
+  background-color: F5F5F5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-options{
+}
+
+.logo {
+  width: 8%;
+  height: 8%;
+}

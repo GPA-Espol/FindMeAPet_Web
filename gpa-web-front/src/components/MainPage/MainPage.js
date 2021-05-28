@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './MainPage.css';
 
 
 class MainPage extends Component{
@@ -6,7 +7,9 @@ class MainPage extends Component{
   render(){
     return(
       <React.Fragment>
-        <h1>This the main page content</h1>
+        <div className="main-page">
+          <h1>This the main page content</h1>
+        </div>
       </React.Fragment>
     )
   }
