@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './NavBar.css';
 import logo from '../../assets/nav-bar-assets/LogoGPA.png';
-// import 'assets/nav-bar-assets/LogoGPA.png'
+// import 'assets/'
 // import logo from 'LogoGPA.png'
 
 
