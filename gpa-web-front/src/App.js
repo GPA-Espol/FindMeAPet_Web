@@ -1,28 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar/NavBar.js';
+import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
+import MainPage from './components/MainPage/MainPage';
+import QuienesSomos from './components/QuienesSomos/QuienesSomos';
+import PagAdoptar from './components/PagAdoptar/PagAdoptar';
+import PagUnete from './components/PagUnete/PagUnete';
 
 function App() {
 
   return (
     <div className="App">
-      <div className="nav-bar">
-        <NavBar />
-      </div>
+      <NavBar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload. HOLA
+          HOLA CHICOS !!!!!!!!!!!!!!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <MainPage />
+      <QuienesSomos />
+      <PagAdoptar />
+      <PagUnete />
+      <Footer />
     </div>
   );
 }
