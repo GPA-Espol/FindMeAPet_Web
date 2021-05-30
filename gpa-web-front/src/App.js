@@ -1,27 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
-import MainPage from './components/MainPage/MainPage';
-import QuienesSomos from './components/QuienesSomos/QuienesSomos';
-import PagAdoptar from './components/PagAdoptar/PagAdoptar';
-import PagUnete from './components/PagUnete/PagUnete';
+import MainPage from './components/Pages/MainPage/MainPage';
+import QuienesSomos from './components/Pages/QuienesSomos/QuienesSomos';
+import Adoptar from './components/Pages/Adoptar/Adoptar';
+import Unete from './components/Pages/Unete/Unete';
 
 function App() {
 
   return (
     <div className="App">
-      <NavBar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          HOLA CHICOS !!!!!!!!!!!!!!
-        </p>
-      </header>
-      <MainPage />
-      <QuienesSomos />
-      <PagAdoptar />
-      <PagUnete />
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={MainPage}></Route>
+          <Route exact path="/quienessomos" component={QuienesSomos}></Route>
+          <Route exact path="/adoptar" component={Adoptar}></Route>
+          <Route exact path="/unete" component={Unete}></Route>
+        </Switch>
+      </Router>
+
+
       <Footer />
     </div>
   );

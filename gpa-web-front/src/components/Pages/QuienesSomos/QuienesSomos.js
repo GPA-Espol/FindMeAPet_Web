@@ -6,11 +6,9 @@ class QuienesSomos extends Component{
 
   render(){
     return(
-      <React.Fragment>
-        <div className="quienes-somos-section">
-          <h1>Quienes somos</h1>
-        </div>
-      </React.Fragment>
+      <div className="quienes-somos-section">
+        <h1>Quienes somos</h1>
+      </div>
     )
   }
 }
