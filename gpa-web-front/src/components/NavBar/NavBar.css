@@ -1,11 +1,32 @@
-.topnav {
-  background-color: F5F5F5;
+.navbar {
+  background-color: #F5F5F5;
+}
+
+.nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
 }
 
 
-.logo {
-  width: 8%;
-  height: 8%;
+.nav-logo {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  padding: 0.5rem 1rem;
+}
+
+.donar-button {
+  padding: 1rem;
+  margin-right: 1rem;
 }
