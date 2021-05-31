@@ -1,9 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
-// import logo from '../../assets/nav-bar-assets/LogoGPA.png';
-// import 'assets/'
-// import logo from 'LogoGPA.png'
 
 function NavBar () {
   return (
