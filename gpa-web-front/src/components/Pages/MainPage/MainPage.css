@@ -2,3 +2,13 @@
   background-color: #F9C46A;
 }
 
+.como-ayudamos-section {
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: luminosity;
+  background-color: #EC823A;
+}
+

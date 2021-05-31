@@ -1,5 +1,15 @@
 .quienes-somos-section {
-  background-color: #F9C46A;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: luminosity;
+  background-color: #fff;
+}
+
+.background-GPA1 {
+  background-color: #E8E4E1;
 }
 
 
