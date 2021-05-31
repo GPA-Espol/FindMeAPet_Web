@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
-// import logo from '../../assets/nav-bar-assets/LogoGPA.png';
-// import 'assets/'
-// import logo from 'LogoGPA.png'
+import { MenuItems } from '../../fakeBackEnd/navOptions';
+
 
 function NavBar () {
+
   return (
     <React.Fragment>
       <nav className="navbar">
@@ -14,30 +14,20 @@ function NavBar () {
             GPA LOGO
           </NavLink>
 
+          {/* TODO: Has dinámico el app.js relacionado */}
           <ul className="nav-menu">
-            <li className="nav-link">
-              <NavLink exact to="/" className="nav-links">
-                Inicio
-              </NavLink>
-            </li>
-            <li className="nav-link">
-              <NavLink exact to="/quienessomos" className="nav-links">
-                Quienes somos
-              </NavLink>
-            </li>
-            <li className="nav-link">
-              <NavLink exact to="/adoptar" className="nav-links">
-                Adoptar
-              </NavLink>
-            </li>
-            <li className="nav-link">
-              <NavLink exact to="/unete" className="nav-links">
-                Únete
-              </NavLink>
-            </li>
+            {MenuItems.map((item) => {
+              return(
+                <li className="nav-link">
+                  <NavLink exact to={item.url} className="nav-links">
+                    {item.nombre}
+                  </NavLink>
+                </li>
+              );
+            })}
           </ul>
-          <button className="donar-button" type="button">Click Me!</button>
 
+          <button className="donar-button" type="button">Click Me!</button>
 
         </div>
       </nav>
@@ -45,39 +35,6 @@ function NavBar () {
   )
 }
 
-
-// LO QUE BORRASTE
-
-          {/* <img className="logo" src={logo} alt="" /> */}
-          {/* <div className="nav-options"> */}
-          {/*   <a className="active" href="#home">Inicio</a> */}
-          {/*   <a href="">Quienes somos</a> */}
-          {/*   <a href="">Adoptar</a> */}
-          {/*   <a href="">Únete</a> */}
-          {/* </div> */}
-          {/* <button type="button">Click Me!</button> */}
-
-// class NavBar extends Component{
-
-//   render(){
-//     return(
-//       <React.Fragment>
-//         <div className="topnav">
-//           <img className="logo" src={logo} alt="" />
-
-//           <div className="nav-options">
-//             <a className="active" href="#home">Inicio</a>
-//             <a href="">Quienes somos</a>
-//             <a href="">Adoptar</a>
-//             <a href="">Únete</a>
-//           </div>
-
-//           <button type="button">Click Me!</button>
-
-//         </div>
-//       </React.Fragment>
-//     )
-//   }
-// }
-
 export default NavBar
+
+
