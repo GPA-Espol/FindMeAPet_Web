@@ -10,7 +10,6 @@ class NavBar extends Component {
   
   render () {
     return(
-    <React.Fragment>
       <nav className="navbar">
         <div className="nav-container container-fluid px-0">
 
@@ -20,6 +19,7 @@ class NavBar extends Component {
             </NavLink>
           </div>
 
+          {/* TODO: Importa font awesome */}
           <div className="menu-icon" onClick={this.handleClick}>
             <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
           </div>
@@ -43,11 +43,9 @@ class NavBar extends Component {
             <Button variant="contained" color="primary" 
               style={{color: "#F5f5f5", backgroundColor: "#ea7a1e", fontWeight: "bold"}}>Donar</Button>
           </div>
-          {/* <button className="donar-button" type="button">Click Me!</button> */}
 
         </div>
       </nav>
-    </React.Fragment>
     )
   }
 
