@@ -9,10 +9,12 @@ function NavBar () {
   return (
     <React.Fragment>
       <nav className="navbar">
-        <div className="nav-container">
-          <NavLink exact to="/" className="nav-logo">
-            <img src="NavBar/LogoGPA_Navbar.png" alt="GPA Logo"/>
-          </NavLink>
+        <div className="nav-container container-fluid px-0">
+          <div className="logo-container">
+            <NavLink exact to="/" className="nav-logo">
+              <img src="NavBar/logo_GPA_Horizontal.png" alt="GPA Logo"/>
+            </NavLink>
+          </div>
 
           {/* TODO: Has dinámico el app.js relacionado */}
           <ul className="nav-menu">

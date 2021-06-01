@@ -3,44 +3,54 @@
   box-shadow: 10px 10px 11px 1px rgba(0,0,0,0.2);
 }
 
-.nav-container {
+.nav-container{
   display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 1.3rem;
   height: 6rem;
-
+  padding-right: 0px, 0px;
+  
+  /* align-items: center; */
+  
   /* Gradient */
   /* background: linear-gradient(90deg, #F9C49A 0%, #ea7a1e 100%); */
 }
 
 /* TODO: Toda el logo ocupa mucho, arreglar para que el cursor pointer quede bien */
 .nav-logo {
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  justify-content: left;
   padding: 1rem;
   margin-left: 1rem;
 }
 
 .nav-logo img {
-  width: 90px;
+  width: 200px;
   height: auto;
   margin-top: 0.5rem !important;
   cursor: pointer;
-  /* border: 5px solid black; */
 }
 
+
 .nav-menu {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5,auto);
+  grid-gap: 3px;
   list-style: none;
   text-align: center;
-  margin-right: 3rem;
-  align-items: center;
+  width: 70vw;
+  justify-content: end;
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  /* list-style: none; */
+  /* text-align: center; */
+  /* align-items: center; */
+  /* margin-bottom: 0; */
 }
 
 .nav-links {
-  padding: 0.5rem 1.3rem;
+  padding: 0.5rem 0.3rem;
 }
-
 
 .nav-links:link, .nav-links:visited {
   text-decoration: none;
@@ -49,20 +59,16 @@
 }
 
 .nav-links:hover {
-  /* background-color: #F5f5f5; */
-  /* color: #ea7a1e; */
-
   color: #EA7A1E;
-  /* background-color: #ea7a1e; */
   border-radius: 6px;
-  transition: all 0.5s;
+  transition: all 0.8s, ease-in-out; 
   font-size: 1.35rem  ;
 
 }
 
 .donar-button-container {
-  padding: 1rem;
-  margin-right: 1.5rem;
+  justify-content: right;
+  padding-right: 2rem;
 }
 
 

@@ -6,11 +6,11 @@ class Footer extends Component{
 
   render(){
     return(
-      <React.Fragment>
-        <div className="footer-section">
+      <div className="footer-section">
+        <div className="footer-container">
           <h1>This is a footer</h1>
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }
