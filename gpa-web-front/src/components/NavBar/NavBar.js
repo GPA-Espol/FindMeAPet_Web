@@ -1,20 +1,29 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 import { MenuItems } from '../../fakeBackEnd/navOptions';
 import Button from '@material-ui/core/Button';
 
-function NavBar () {
 
-  return (
+class NavBar extends Component {
+  state = { clicked: false }
+  
+  render () {
+    return(
     <React.Fragment>
       <nav className="navbar">
         <div className="nav-container container-fluid px-0">
+
           <div className="logo-container">
             <NavLink exact to="/" className="nav-logo">
               <img src="NavBar/logo_GPA_Horizontal.png" alt="GPA Logo"/>
             </NavLink>
           </div>
+
+          <div className="menu-icon" onClick={this.handleClick}>
+            <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+          </div>
+
 
           {/* TODO: Has dinámico el app.js relacionado */}
           <ul className="nav-menu">
@@ -28,6 +37,8 @@ function NavBar () {
               );
             })}
           </ul>
+
+          {/* TODO: Estiliza el botón */}
           <div className="donar-button-container">
             <Button variant="contained" color="primary" 
               style={{color: "#F5f5f5", backgroundColor: "#ea7a1e", fontWeight: "bold"}}>Donar</Button>
@@ -37,9 +48,10 @@ function NavBar () {
         </div>
       </nav>
     </React.Fragment>
-  )
+    )
+  }
+
 }
 
 export default NavBar
-
 
