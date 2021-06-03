@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
-import { NavLink } from 'react-router-dom';
 import './NavBar.css';
+import { NavLink } from 'react-router-dom';
 import { MenuItems } from '../../fakeBackEnd/navOptions';
 import Button from '@material-ui/core/Button';
 
 
 class NavBar extends Component {
   state = { clicked: false }
+
+  handleClick = () => {
+    this.setState({ clicked: !this.state.clicked})
+  }
   
   render () {
     return(
@@ -19,14 +23,17 @@ class NavBar extends Component {
             </NavLink>
           </div>
 
-          {/* TODO: Importa font awesome */}
+
+          {/* Hamburger menu*/}
           <div className="menu-icon" onClick={this.handleClick}>
             <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
           </div>
 
 
+
+
           {/* TODO: Has dinámico el app.js relacionado */}
-          <ul className="nav-menu">
+          <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
             {MenuItems.map((item,index) => {
               return(
                 <li className="nav-link" key={index}>
@@ -38,11 +45,19 @@ class NavBar extends Component {
             })}
           </ul>
 
+
+
+
+
           {/* TODO: Estiliza el botón */}
-          <div className="donar-button-container">
-            <Button variant="contained" color="primary" 
-              style={{color: "#F5f5f5", backgroundColor: "#ea7a1e", fontWeight: "bold"}}>Donar</Button>
-          </div>
+          {/* <div className="donar-button-container"> */}
+          {/*   <Button className="donar-button" variant="contained" color="primary" */} 
+          {/*     style={{color: "#F5f5f5", backgroundColor: "#ea7a1e", fontWeight: "bold"}}>Donar</Button> */}
+          {/* </div> */}
+
+
+
+
 
         </div>
       </nav>

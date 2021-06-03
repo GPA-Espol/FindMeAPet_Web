@@ -73,3 +73,100 @@
 }
 
 
+.donar-button-container-mobile{
+  display: none;
+}
+
+.fa-bars {
+/* you're no using this */
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+
+
+
+@media screen and (max-width: 960px) {
+  .nav-container {
+    position: relative;
+  }
+
+  /* We hide the original menu */
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 450px;
+    position: absolute;
+    top: 105px;
+    left:-100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  /* This is the active menu in small screens */
+  .nav-menu.active {
+    background: #ea7a1e;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    color: #f5f5f5;
+    background-color: #EA7A1E;
+    border-radius: 0;
+  }
+
+  .nav-logo {
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    /* transform: translate(25%, 50%); */
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%,60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .donar-button-container {
+    display: none;
+  }
+
+
+
+  /* We're not using this */
+  /* .fa-times{ */
+
+  /* } */
+
+
+
+}
+
+
+
+
+
+
+
