@@ -43,17 +43,21 @@ class NavBar extends Component {
                 </li>
               );
             })}
+
+
+            {/* TODO: Estiliza el botón */}
+            <div className="donar-button">
+              <div className="donar-button-container">
+                <Button variant="contained" color="primary" 
+                  style={{color: "#F5f5f5", backgroundColor: "#ea7a1e", fontWeight: "bold"}}>Donar</Button>
+              </div>
+            </div>
+
           </ul>
 
 
 
 
-
-          {/* TODO: Estiliza el botón */}
-          {/* <div className="donar-button-container"> */}
-          {/*   <Button className="donar-button" variant="contained" color="primary" */} 
-          {/*     style={{color: "#F5f5f5", backgroundColor: "#ea7a1e", fontWeight: "bold"}}>Donar</Button> */}
-          {/* </div> */}
 
 
 

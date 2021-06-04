@@ -91,7 +91,6 @@
 
 
 
-
 @media screen and (max-width: 960px) {
   .nav-container {
     position: relative;
@@ -112,7 +111,7 @@
 
   /* This is the active menu in small screens */
   .nav-menu.active {
-    background: #ea7a1e;
+    background: #f5f5f5;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -124,20 +123,16 @@
     padding: 2rem;
     width: 100%;
     display: table;
+    box-shadow: 2px 12px 7px 0px #EBEBEB 
+
   }
 
   .nav-links:hover {
     color: #f5f5f5;
     background-color: #EA7A1E;
-    border-radius: 0;
+    border-radius: 10px;
   }
 
-  .nav-logo {
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
-    /* transform: translate(25%, 50%); */
-  }
 
   .menu-icon {
     display: block;
@@ -149,16 +144,64 @@
     cursor: pointer;
   }
 
+
+/* Equivalente a nav-links */
   .donar-button-container {
-    display: none;
+    padding-right: 0rem;
+    height: 85px;
+    margin-right: 18px;
+    margin-left: 18px;
+    background-color: #585943;
+    text-align: center;
+    border-radius: 10px;
+
   }
 
 
 
-  /* We're not using this */
-  /* .fa-times{ */
 
+
+  /* .donar-button { */
+  /*   /1* padding: 2rem; *1/ */
+  /*   padding-top: 2rem; */
+  /*   padding-bottom: 2rem; */
+  /*   /1* margin-top: 2rem; *1/ */
+  /*   /1* margin-bottom: 2rem; *1/ */
+
+
+
+
+
+  /*   margin-right: 18px; */
+  /*   margin-left: 18px; */
+  /*   background-color: #585943; */
+  /*   text-align: center; */
+  /*   border-radius: 10px; */
   /* } */
+
+  /* .donar-button-container { */
+  /*   padding: 0; */
+  /*   /1* text-align: center; *1/ */
+  /*   /1* padding: 2rem; *1/ */
+  /*   /1* border-radius: 10px; *1/ */
+  /*   /1* margin-right: 18px; *1/ */
+  /*   /1* margin-left: 18px; *1/ */
+  /*   /1* background-color: #585943 *1/ */
+  /* } */
+
+
+
+
+  button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary{
+    /* background-color: blue !important; */
+    width: 100% !important;
+    height: 100% !important;
+    font-size: 1.1rem;
+
+
+  }
+
+
 
 
 
