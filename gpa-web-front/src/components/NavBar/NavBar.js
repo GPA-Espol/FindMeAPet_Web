@@ -16,6 +16,7 @@ class NavBar extends Component {
     return(
       <nav className="navbar">
         <div className="nav-container container-fluid px-0">
+        {/* <div className="nav-container"> */}
 
           <div className="logo-container">
             <NavLink exact to="/" className="nav-logo">
@@ -28,8 +29,6 @@ class NavBar extends Component {
           <div className="menu-icon" onClick={this.handleClick}>
             <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
           </div>
-
-
 
 
           {/* TODO: Has dinámico el app.js relacionado */}
