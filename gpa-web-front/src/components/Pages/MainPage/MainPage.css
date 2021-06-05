@@ -4,7 +4,7 @@
   background-position: 50% 50%;
   background-color: rgba(0,0,0,0.4);
   background-blend-mode: darken;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 .como-ayudamos-section {
@@ -15,5 +15,21 @@
   background-size: cover;
   background-blend-mode: luminosity;
   background-color: #EC823A;
+}
+
+.text-orange {
+  color: #EC823A;
+}
+
+.header-giant {
+  font-size: calc(2rem + 3vw)!important;
+}
+
+.header-big {
+  font-size: calc(1.85rem + 1.75vw)!important;
+}
+
+.border-none {
+  border: none;
 }
 

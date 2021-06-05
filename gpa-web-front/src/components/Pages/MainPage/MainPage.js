@@ -9,16 +9,13 @@ const MainPage = () => {
     <React.Fragment>
       <div className="home-banner-section container-fluid" style={{ backgroundImage: "url(/MainPage/Banner_2.png)" }}>
         <div className="container py-5">
-          <div className="py-5"></div>
-          <div className="py-5"></div>
+          <div className="py-3"></div>
           <div className="row row-cols-auto">
             <div className="col">
-              <p className="fs-1 text-center text-white">¡Ayúdalos a encontrar un hogar!</p>
-              <p className="fs-6 text-center text-white">#AdoptaUnCorazón</p>
+              <p className="header-giant text-center text-white fw-bold">¡Ayúdalos a<br></br>encontrar un<br></br>hogar!</p>
+              <p className="fs-3 text-center text-orange fw-bold">#AdoptaUnCorazón</p>
             </div>
           </div>
-          <div className="py-5"></div>
-          <div className="py-5"></div>
         </div>
       </div>
       <div className="como-ayudamos-section" style={{ backgroundImage: "url(/paw_wallpaper.jpg)" }}>
@@ -26,30 +23,30 @@ const MainPage = () => {
           <div className="container pt-5">
             <div className="row pb-5">
               <div className="col-12 text-center">
-                <h1>¿Cómo los hemos ayudado?</h1>
+                <p className="fs-1">¿Cómo los hemos ayudado?</p>
               </div>
             </div>
             <div className="row">
-              <div className="col-md-4 mb-4">
-                <div class="card text-center">
+              <div className="col-lg-4 mb-4">
+                <div class="card text-center h-100 bg-transparent border-none">
                   <div class="card-body">
-                    <h5 class="card-title fs-1"><CountUp end={136} duration={countDuration}/></h5>
+                    <h5 class="card-title header-big text-orange"><CountUp end={136} duration={countDuration}/></h5>
                     <p class="card-text fs-5">Gatos y Perros alrededor del campus tienen cuidados y alimento día a día</p>
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 mb-4">
-                <div class="card text-center">
+              <div className="col-lg-4 mb-4">
+                <div class="card text-center h-100 bg-transparent border-none">
                   <div class="card-body">
-                    <h5 class="card-title fs-1"><CountUp end={91} suffix="%" duration={countDuration}/></h5>
+                    <h5 class="card-title header-big text-orange"><CountUp end={91} suffix="%" duration={countDuration}/></h5>
                     <p class="card-text fs-5">De los gatos y perros del campus están esterilizados</p>
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 mb-4">
-                <div class="card text-center">
+              <div className="col-lg-4 mb-4">
+                <div class="card text-center h-100 bg-transparent border-none">
                   <div class="card-body">
-                    <h5 class="card-title fs-1"><CountUp end={11} suffix=" años" duration={countDuration}/></h5>
+                    <h5 class="card-title header-big text-orange"><CountUp end={11} suffix=" años" duration={countDuration}/></h5>
                     <p class="card-text fs-5">Manteniendo la lucha y cada vez haciéndolo de mejor</p>
                   </div>
                 </div>
@@ -62,7 +59,7 @@ const MainPage = () => {
         </svg>
         <div className="container">
           <div className="row text-center fs-2">
-            <p className="py-5 text-white">
+            <p className="py-5 text-white fw-bold">
               Todo lo que se ha logrado hasta el momento es gracias al gran corazón de muchas personas que no nos abandonan, así como GPA no pretende abandonar a las colonias felinas del campus
             </p>
             <p className="py-4"></p>
