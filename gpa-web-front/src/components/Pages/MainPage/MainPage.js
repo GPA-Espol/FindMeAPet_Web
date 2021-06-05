@@ -6,7 +6,21 @@ import CountUp from 'react-countup';
 const MainPage = () => {
   let countDuration = 5; // duracion de animacion de conteo en segundos
   return(
-    <div className="main-page">
+    <React.Fragment>
+      <div className="home-banner-section container-fluid" style={{ backgroundImage: "url(/MainPage/Banner_2.png)" }}>
+        <div className="container py-5">
+          <div className="py-5"></div>
+          <div className="py-5"></div>
+          <div className="row row-cols-auto">
+            <div className="col">
+              <p className="fs-1 text-center text-white">¡Ayúdalos a encontrar un hogar!</p>
+              <p className="fs-6 text-center text-white">#AdoptaUnCorazón</p>
+            </div>
+          </div>
+          <div className="py-5"></div>
+          <div className="py-5"></div>
+        </div>
+      </div>
       <div className="como-ayudamos-section" style={{ backgroundImage: "url(/paw_wallpaper.jpg)" }}>
         <div className="container-fluid background-GPA1">
           <div className="container pt-5">
@@ -16,7 +30,7 @@ const MainPage = () => {
               </div>
             </div>
             <div className="row">
-              <div className="col">
+              <div className="col-md-4 mb-4">
                 <div class="card text-center">
                   <div class="card-body">
                     <h5 class="card-title fs-1"><CountUp end={136} duration={countDuration}/></h5>
@@ -24,7 +38,7 @@ const MainPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="col">
+              <div className="col-md-4 mb-4">
                 <div class="card text-center">
                   <div class="card-body">
                     <h5 class="card-title fs-1"><CountUp end={91} suffix="%" duration={countDuration}/></h5>
@@ -32,7 +46,7 @@ const MainPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="col">
+              <div className="col-md-4 mb-4">
                 <div class="card text-center">
                   <div class="card-body">
                     <h5 class="card-title fs-1"><CountUp end={11} suffix=" años" duration={countDuration}/></h5>
@@ -55,7 +69,7 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   )
 }
 

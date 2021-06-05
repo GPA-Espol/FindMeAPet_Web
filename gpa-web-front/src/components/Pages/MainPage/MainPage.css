@@ -1,5 +1,10 @@
-.main-page {
-  background-color: #F9C46A;
+.home-banner-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: rgba(0,0,0,0.4);
+  background-blend-mode: darken;
+  background-attachment: fixed;
 }
 
 .como-ayudamos-section {
