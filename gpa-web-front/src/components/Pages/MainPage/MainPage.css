@@ -7,6 +7,10 @@
   /* background-attachment: fixed; */
 }
 
+.bg-gray {
+  background-color: #E8E4E1;
+}
+
 .como-ayudamos-section {
   min-height: 500px;
   background-attachment: fixed;
@@ -18,7 +22,19 @@
 }
 
 .text-orange {
-  color: #EC823A;
+  color: #EC823A!important;
+}
+
+.text-coffee {
+  color: #7C3C21!important;
+}
+
+.text-gray {
+  color: #E8E4E1;
+}
+
+.border-coffee {
+  border-color: #7C3C21!important;
 }
 
 .header-giant {

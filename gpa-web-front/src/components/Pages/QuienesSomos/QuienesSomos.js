@@ -11,7 +11,7 @@ class QuienesSomos extends Component
   {
     return (
       <div className="quienes-somos-section" style={{ backgroundImage: "url(/paw_wallpaper.jpg)" }}>
-        <div className="container-fluid background-GPA1">
+        <div className="container-fluid bg-gray">
           <div className="container py-5">
             <div className="row">
               <p className="text-center fs-1">¿Quiénes Somos?</p>
