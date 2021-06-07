@@ -49,3 +49,11 @@
   border: none;
 }
 
+.icon-main-page {
+  border: #EC823A solid;
+  border-radius: 50%;
+  padding: 20px;
+  background-color: #EC823A;
+  width: 1em !important;
+}
+

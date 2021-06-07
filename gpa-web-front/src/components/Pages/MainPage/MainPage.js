@@ -2,7 +2,7 @@ import React from 'react';
 import './MainPage.css';
 import CountUp from 'react-countup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faCat, faBone, faHandshake } from "@fortawesome/free-solid-svg-icons";
 
 const MainPage = () => {
   let countDuration = 5; // duracion de animacion de conteo en segundos
@@ -30,29 +30,37 @@ const MainPage = () => {
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row pb-5">
               <div className="col-lg-4 mb-4">
-                <div class="card text-center h-100 bg-transparent border-none">
-                  {/* <FontAwesomeIcon icon={faCoffee} /> */}
-                  <div class="card-body">
-                    <h5 class="card-title fs-2 fw-bold text-coffee">Adopta</h5>
-                    <p class="card-text fs-4 text-coffee">¡Protégelos! Otórgales un nuevo hogar</p>
+                <div className="card text-center h-100 bg-transparent border-none">
+                  <div className="d-flex justify-content-center w-100">
+                    <FontAwesomeIcon icon={faCat} size="7x" color="white" className="icon-main-page"/>
+                  </div>
+                  <div className="card-body">
+                    <h5 className="card-title fs-2 fw-bold text-coffee">Adopta</h5>
+                    <p className="card-text fs-5 text-coffee">¡Protégelos! Otórgales un nuevo hogar</p>
                   </div>
                 </div>
               </div>
               <div className="col-lg-4 mb-4">
-                <div class="card text-center h-100 bg-transparent border-none">
-                  <div class="card-body">
-                    <h5 class="card-title fs-2 fw-bold text-coffee">Dona</h5>
-                    <p class="card-text fs-4 text-coffee">Ayúdanos a mantener a la fauna urbana del Campus. Cualquier granito de arena nos será util</p>
+                <div className="card text-center h-100 bg-transparent border-none">
+                  <div className="d-flex justify-content-center w-100">
+                    <FontAwesomeIcon icon={faBone} size="7x" color="white" className="icon-main-page"/>
+                  </div>
+                  <div className="card-body">
+                    <h5 className="card-title fs-2 fw-bold text-coffee">Dona</h5>
+                    <p className="card-text fs-5 text-coffee">Ayúdanos a mantener a la fauna urbana del Campus. Cualquier granito de arena nos será util</p>
                   </div>
                 </div>
               </div>
               <div className="col-lg-4 mb-4">
-                <div class="card text-center h-100 bg-transparent border-none">
-                  <div class="card-body">
-                    <h5 class="card-title fs-2 fw-bold text-coffee">Únete</h5>
-                    <p class="card-text fs-4 text-coffee">Ven junto a nosotros y cuidemos juntos a nuestros animalitos del campus</p>
+                <div className="card text-center h-100 bg-transparent border-none">
+                  <div className="d-flex justify-content-center w-100">
+                    <FontAwesomeIcon icon={faHandshake} size="7x" color="white" className="icon-main-page"/>
+                  </div>
+                  <div className="card-body">
+                    <h5 className="card-title fs-2 fw-bold text-coffee">Únete</h5>
+                    <p className="card-text fs-5 text-coffee">Ven junto a nosotros y cuidemos juntos a nuestros animalitos del campus</p>
                   </div>
                 </div>
               </div>
@@ -73,26 +81,26 @@ const MainPage = () => {
             </div>
             <div className="row">
               <div className="col-lg-4 mb-4">
-                <div class="card text-center h-100 bg-transparent border-none">
-                  <div class="card-body">
-                    <h5 class="card-title header-big text-orange"><CountUp end={136} duration={countDuration}/></h5>
-                    <p class="card-text fs-4 text-coffee">Gatos y Perros alrededor del campus tienen cuidados y alimento día a día</p>
+                <div className="card text-center h-100 bg-transparent border-none">
+                  <div className="card-body">
+                    <h5 className="card-title header-big text-orange"><CountUp end={136} duration={countDuration}/></h5>
+                    <p className="card-text fs-4 text-coffee">Gatos y Perros alrededor del campus tienen cuidados y alimento día a día</p>
                   </div>
                 </div>
               </div>
               <div className="col-lg-4 mb-4">
-                <div class="card text-center h-100 bg-transparent border-none">
-                  <div class="card-body">
-                    <h5 class="card-title header-big text-orange"><CountUp end={91} suffix="%" duration={countDuration}/></h5>
-                    <p class="card-text fs-4 text-coffee">De los gatos y perros del campus están esterilizados</p>
+                <div className="card text-center h-100 bg-transparent border-none">
+                  <div className="card-body">
+                    <h5 className="card-title header-big text-orange"><CountUp end={91} suffix="%" duration={countDuration}/></h5>
+                    <p className="card-text fs-4 text-coffee">De los gatos y perros del campus están esterilizados</p>
                   </div>
                 </div>
               </div>
               <div className="col-lg-4 mb-4">
-                <div class="card text-center h-100 bg-transparent border-none">
-                  <div class="card-body">
-                    <h5 class="card-title header-big text-orange"><CountUp end={11} suffix=" años" duration={countDuration}/></h5>
-                    <p class="card-text fs-4 text-coffee">Manteniendo la lucha y cada vez haciéndolo de mejor</p>
+                <div className="card text-center h-100 bg-transparent border-none">
+                  <div className="card-body">
+                    <h5 className="card-title header-big text-orange"><CountUp end={11} suffix=" años" duration={countDuration}/></h5>
+                    <p className="card-text fs-4 text-coffee">Manteniendo la lucha y cada vez haciéndolo de mejor</p>
                   </div>
                 </div>
               </div>
