@@ -11,86 +11,106 @@ class PagAdoptar extends Component{
           <div className="catalogo">
             <div className="catalogo-container">
 
-
-              {/* TODO: AHORA MIRA SI PUEDES HACERLO CON EL QUE YA TIENE HOVER */}
-
               {/* The Bootstrap */}
               <div class="container">
 
-                  <div class="card col-md-3">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+
+
+                {/* TODO: Perfecciona el responsiveness (sobretodo chequea inconsistencias en padding) */}
+                <div className="row">
+                  {/* <div className="col">Primera fila primera columna</div> */}
+
+                  <div className="card col-lg col-md-5 col-12">
+                    <div className="card-body">
+                      <h5 className="card-title">Card title</h5>
+                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" className="btn btn-primary">Go somewhere</a>
                     </div>
                   </div> 
 
-                  <div class="card col-md-3">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <div className="card col-lg col-md-5 col-12">
+                    <div className="card-body">
+                      <h5 className="card-title">Card title</h5>
+                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" className="btn btn-primary">Go somewhere</a>
                     </div>
                   </div> 
 
 
-                  <div class="card col-md-3">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <div className="card col-lg col-md-5 col-12">
+                    <div className="card-body">
+                      <h5 className="card-title">Card title</h5>
+                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" className="btn btn-primary">Go somewhere</a>
                     </div>
                   </div> 
 
-                  <div class="card col-md-3">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <div className="card col-lg col-md-5 col-12">
+                    <div className="card-body">
+                      <h5 className="card-title">Card title</h5>
+                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" className="btn btn-primary">Go somewhere</a>
                     </div>
                   </div> 
+
+                </div>
+
+
+                <div className="row">
+                  <div className="col">Segunda fila primera columna</div>
+                </div>
+
+
+
+
+
 
               </div>
 
 
-              <div className="container">
 
-                {/* Esto debe tener un salto de linea */}
-                  <div class="card col-md-3">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div> 
+
+
+
+
+              {/* <div className="container"> */}
+
+              {/*   {/1* Esto debe tener un salto de linea *1/} */}
+              {/*     <div className="card col-md-3"> */}
+              {/*       <div className="card-body"> */}
+              {/*         <h5 className="card-title">Card title</h5> */}
+              {/*         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+              {/*         <a href="#" className="btn btn-primary">Go somewhere</a> */}
+              {/*       </div> */}
+              {/*     </div> */} 
                 
 
-                  <div class="card col-md-3">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div> 
+              {/*     <div className="card col-md-3"> */}
+              {/*       <div className="card-body"> */}
+              {/*         <h5 className="card-title">Card title</h5> */}
+              {/*         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+              {/*         <a href="#" className="btn btn-primary">Go somewhere</a> */}
+              {/*       </div> */}
+              {/*     </div> */} 
 
-                  <div class="card col-md-3">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div> 
+              {/*     <div className="card col-md-3"> */}
+              {/*       <div className="card-body"> */}
+              {/*         <h5 className="card-title">Card title</h5> */}
+              {/*         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+              {/*         <a href="#" className="btn btn-primary">Go somewhere</a> */}
+              {/*       </div> */}
+              {/*     </div> */} 
 
-                  <div class="card col-md-3">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div> 
+              {/*     <div className="card col-md-3"> */}
+              {/*       <div className="card-body"> */}
+              {/*         <h5 className="card-title">Card title</h5> */}
+              {/*         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+              {/*         <a href="#" className="btn btn-primary">Go somewhere</a> */}
+              {/*       </div> */}
+              {/*     </div> */} 
 
 
-              </div>
+              {/* </div> */}
 
 
 
