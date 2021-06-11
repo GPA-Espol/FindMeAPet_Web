@@ -23,7 +23,7 @@ class QuienesSomos extends Component
                 </div>
               </div>
               <div className="row justify-content-center">
-                <div className="col">
+                <div className="col-10">
                   <p className="pb-4 text-coffee fs-5 text-justify">
                     GPA Claudia Poppe nace a partir de la necesidad de velar por los que no tienen voz, nuestros animalitos de ESPOL. Somos un grupo de personas comprometidas con el bienestar de los animales, principalmente por los que se encuentran dentro del Campus, promovemos la esterilización, la adopción, el cuidado y la tenencia responsable de mascotas.
                   </p>
@@ -35,22 +35,24 @@ class QuienesSomos extends Component
         </section>
         <section id="que-hacemos">
           <div className="container">
-            <div className="row row-cols-3">
-              <div className="col text-center">
+            <div className="row">
+              <div className="col-md text-center">
                 <p className="fs-1 text-coffee">¿Qué hacemos?</p>
                 <div className="d-flex justify-content-center">
                   <div className="border-top border-coffee border-4 text-transparent">aaaaaaa</div>
                 </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col">
-                <ul>
+                <ul className="text-start mx-4">
                   <li>Alimentamos a la fauna urbana de ESPOL</li>
                   <li>Protegemos a los más indefensos del campus</li>
                   <li>Buscamos un hogar digno para ellos</li>
                 </ul>
               </div>
+              <div className="col-md d-flex justify-content-center">
+                <img src="/QuienesSomos/Gato_2.jpg" className="rounded img-fluid w-50"></img>
+              </div>
+            </div>
+            <div className="row">
+              
             </div>
           </div>
         </section>

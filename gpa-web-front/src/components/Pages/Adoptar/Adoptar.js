@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Adoptar.css';
 
+
 class PagAdoptar extends Component
 {
   constructor(props) {
@@ -17,17 +18,17 @@ class PagAdoptar extends Component
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    //event.preventDefault();
-    console.log("onSubmit: " + event.target.value);
+    event.preventDefault();
+    console.log("onSubmit: ", this.state.value);
+    
   }
 
   render() {
     return(
       <div className="pag-adoptar">
         <h1>Página de adopción con cátalogo</h1>
-        <form>
-          <label onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
+          <label>
             Pick your favorite flavor:
             <select value={this.state.value} onChange={this.handleChange}>
               <option value="grapefruit">Grapefruit</option>
