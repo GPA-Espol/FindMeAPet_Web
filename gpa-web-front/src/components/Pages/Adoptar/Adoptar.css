@@ -1,6 +1,7 @@
 
 
 .container {
+  padding: 5px;
   /* display: flex!important; */
   /* align-content: center!important; */
   /* align-items: center!important; */
@@ -8,13 +9,28 @@
   /* margin: 0!important; */
 }
 
+.row {
+  width: 100%;
+  margin: 0;
+}
+
 .card{
-  margin: 10px;
+  /* margin: 5px; */
   height: 300px;
+  padding: 0%;
+  border-width: 10px;
+  border-color: blue;
+
+  /* Para que haya un piti de espacio entre las cartas verticalemente*/
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 
 
+/* .card-body{
+  padding: 0;
+} */
 
 
 

@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import './Adoptar.css';
+import { AnimalItems } from '../../../fakeBackEnd/animalsCatalog.js';
 
 
 class PagAdoptar extends Component{
+  elementsInRow = 0;
 
   render(){
     return(
@@ -11,109 +13,55 @@ class PagAdoptar extends Component{
           <div className="catalogo">
             <div className="catalogo-container">
 
-              {/* The Bootstrap */}
+              {/* Bootstrap */}
               <div class="container">
 
-
-
-                {/* TODO: Perfecciona el responsiveness (sobretodo chequea inconsistencias en padding) */}
+      
                 <div className="row">
-                  {/* <div className="col">Primera fila primera columna</div> */}
-
-                  <div className="card col-lg col-md-5 col-12">
-                    <div className="card-body">
-                      <h5 className="card-title">Card title</h5>
-                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" className="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div> 
-
-                  <div className="card col-lg col-md-5 col-12">
-                    <div className="card-body">
-                      <h5 className="card-title">Card title</h5>
-                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" className="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div> 
-
-
-                  <div className="card col-lg col-md-5 col-12">
-                    <div className="card-body">
-                      <h5 className="card-title">Card title</h5>
-                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" className="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div> 
-
-                  <div className="card col-lg col-md-5 col-12">
-                    <div className="card-body">
-                      <h5 className="card-title">Card title</h5>
-                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" className="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div> 
-
-                </div>
-
-
-                <div className="row">
-                  <div className="col">Segunda fila primera columna</div>
-                </div>
-
-
-
-
-
-
-              </div>
-
-
-
-
-
-
-
-              {/* <div className="container"> */}
-
-              {/*   {/1* Esto debe tener un salto de linea *1/} */}
-              {/*     <div className="card col-md-3"> */}
-              {/*       <div className="card-body"> */}
-              {/*         <h5 className="card-title">Card title</h5> */}
-              {/*         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-              {/*         <a href="#" className="btn btn-primary">Go somewhere</a> */}
-              {/*       </div> */}
-              {/*     </div> */} 
-                
-
-              {/*     <div className="card col-md-3"> */}
-              {/*       <div className="card-body"> */}
-              {/*         <h5 className="card-title">Card title</h5> */}
-              {/*         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-              {/*         <a href="#" className="btn btn-primary">Go somewhere</a> */}
-              {/*       </div> */}
-              {/*     </div> */} 
-
-              {/*     <div className="card col-md-3"> */}
-              {/*       <div className="card-body"> */}
-              {/*         <h5 className="card-title">Card title</h5> */}
-              {/*         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-              {/*         <a href="#" className="btn btn-primary">Go somewhere</a> */}
-              {/*       </div> */}
-              {/*     </div> */} 
-
-              {/*     <div className="card col-md-3"> */}
-              {/*       <div className="card-body"> */}
-              {/*         <h5 className="card-title">Card title</h5> */}
-              {/*         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-              {/*         <a href="#" className="btn btn-primary">Go somewhere</a> */}
-              {/*       </div> */}
-              {/*     </div> */} 
-
-
+              {/* <div className="cat-catalog"> */}
+              {/*   <div className="row"> */}
+              {/*     <div className="row-cols-1 row-cols-md-4"> */}
+              {/*        <div className="hover hover-2 text-white rounded"><img src="" alt=""/> */}
+              {/*          <div className="hover-overlay"></div> */}
+              {/*          <div className="hover-2-content px-5 py-4"> */}
+              {/*            <h3 className="hover-2-title text-uppercase font-weight-bold mb-0"> */} 
+              {/*              <span className="font-weight-light">Image</span> */}
+              {/*              Caption */}
+              {/*            </h3> */}
+              {/*            <p className="hover-2-description text-uppercase mb-0"> */}
+              {/*              Lorem ipsum dolor sit amet, consectetur<br/>adipisicing elit. */}
+              {/*            </p> */}
+              {/*          </div> */}
+              {/*        </div> */}  
+              {/*     </div> */}
+              {/*   </div> */}
               {/* </div> */}
 
 
 
+
+                    {/* Lógica iterable para las tarjetas */}
+                    {/* TODO: Usa la imagen como background y el link lo usaras en el futuro para la ventana del animalito */}
+                    {AnimalItems.map((item,index) => {
+                      return(
+                        <div className="card col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                          <div className="card-body">
+                            <h5 className="card-title">{item.nombre}</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p className="card-text">{item.descripcion}</p>
+                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div> 
+                      );
+                    })}
+
+
+
+                </div>
+
+
+
+              </div>
 
 
 
@@ -128,6 +76,28 @@ class PagAdoptar extends Component{
 
 
 
+
+                  {/* This is the good card */}
+                  {/* <div className="card col-xxl col-xl col-lg col-md-6 col-sm-6">
+                    <div className="card-body">
+                      <h5 className="card-title">Card title</h5>
+                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" className="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>  */}
+      
+                  {/* This is the winner card */}
+                  {/* <div className="card col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div className="card-body">
+                      <h5 className="card-title">Card title</h5>
+                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" className="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>  */}
+
+
+
+                    // This is the card with the style
               {/* <div className="cat-catalog"> */}
               {/*   <div className="row"> */}
               {/*     <div className="row-cols-1 row-cols-md-4"> */}
