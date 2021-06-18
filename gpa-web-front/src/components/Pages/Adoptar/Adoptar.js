@@ -16,44 +16,31 @@ class PagAdoptar extends Component{
               {/* Bootstrap */}
               <div class="container">
 
-      
                 <div className="row">
-              {/* <div className="cat-catalog"> */}
-              {/*   <div className="row"> */}
-              {/*     <div className="row-cols-1 row-cols-md-4"> */}
-              {/*        <div className="hover hover-2 text-white rounded"><img src="" alt=""/> */}
-              {/*          <div className="hover-overlay"></div> */}
-              {/*          <div className="hover-2-content px-5 py-4"> */}
-              {/*            <h3 className="hover-2-title text-uppercase font-weight-bold mb-0"> */} 
-              {/*              <span className="font-weight-light">Image</span> */}
-              {/*              Caption */}
-              {/*            </h3> */}
-              {/*            <p className="hover-2-description text-uppercase mb-0"> */}
-              {/*              Lorem ipsum dolor sit amet, consectetur<br/>adipisicing elit. */}
-              {/*            </p> */}
-              {/*          </div> */}
-              {/*        </div> */}  
-              {/*     </div> */}
-              {/*   </div> */}
-              {/* </div> */}
 
 
-
-
-                    {/* Lógica iterable para las tarjetas */}
-                    {/* TODO: Usa la imagen como background y el link lo usaras en el futuro para la ventana del animalito */}
+      
+                    {/* Logica iterable con styling */}
                     {AnimalItems.map((item,index) => {
                       return(
-                        <div className="card col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                          <div className="card-body">
-                            <h5 className="card-title">{item.nombre}</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <p className="card-text">{item.descripcion}</p>
-                            <a href="#" className="btn btn-primary">Go somewhere</a>
-                          </div>
-                        </div> 
+                        <div className="my-card col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                          <div className="hover hover-2 text-white rounded"><img src="" alt=""/>
+                            <div className="hover-overlay"></div>
+                            <div className="hover-2-content px-5 py-4">
+                              <h3 className="hover-2-title text-uppercase font-weight-bold mb-0"> 
+                                <span className="font-weight-light">{item.nombre}</span>
+                              </h3>
+                              <p className="hover-2-description text-uppercase mb-0">
+                                {item.descripcion}
+                              </p>
+                            </div>
+                          </div>  
+                        </div>
                       );
                     })}
+
+
+
 
 
 
@@ -72,6 +59,46 @@ class PagAdoptar extends Component{
     )
   }
 }
+
+
+
+
+
+
+
+                    {/* Lógica iterable para las tarjetas */}
+                    {/* TODO: Usa la imagen como background y el link lo usaras en el futuro para la ventana del animalito */}
+                    {/* {AnimalItems.map((item,index) => {
+                      return(
+                        <div className="card col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                          <div className="card-body">
+                            <h5 className="card-title">{item.nombre}</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p className="card-text">{item.descripcion}</p>
+                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div> 
+                      );
+                    })} */}
+
+
+
+
+
+                  {/* Tarjeta con diseño como me la baje (con mis modificaciones para que sea responsive) */}
+                  {/* <div className="my-card col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                     <div className="hover hover-2 text-white rounded"><img src="" alt=""/>
+                       <div className="hover-overlay"></div>
+                       <div className="hover-2-content px-5 py-4">
+                         <h3 className="hover-2-title text-uppercase font-weight-bold mb-0"> 
+                           <span className="font-weight-light">Image</span>
+                         </h3>
+                         <p className="hover-2-description text-uppercase mb-0">
+                           Lorem ipsum dolor sit amet, consectetur<br/>adipisicing elit.
+                         </p>
+                       </div>
+                     </div>  
+                  </div> */}
 
 
 
