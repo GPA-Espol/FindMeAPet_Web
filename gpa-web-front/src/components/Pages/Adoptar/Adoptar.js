@@ -73,8 +73,9 @@ class PagAdoptar extends Component{
                 <div className="row">
                     {/* Logica iterable con styling */}
                     {AnimalItems.map((item,index) => {
-                      if(item.nombre != this.state.value) 
+                      if(item.nombre !== this.state.value) 
                         return constructAnimalCard(item, index)
+                      return <span className="d-none" key={index}></span>
                     })}
                 </div>
               </div>
