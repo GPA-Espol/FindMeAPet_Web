@@ -50,7 +50,7 @@ class QuienesSomos extends Component
                 </ul>
               </div>
               <div className="col-md d-flex justify-content-center">
-                <img src="/QuienesSomos/Gato_2.jpg" className="rounded img-fluid w-50 orange-shadow"></img>
+                <img src="/QuienesSomos/Gato_2.jpg" className="rounded img-fluid w-50 orange-shadow" alt="Quienes somos alt"></img>
               </div>
             </div>
             <div className="row">

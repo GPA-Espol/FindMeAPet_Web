@@ -2,24 +2,25 @@ import React, {Component} from 'react';
 import './Adoptar.css';
 import { AnimalItems } from '../../../fakeBackEnd/animalsCatalog.js';
 
-function constructOption(nombre)
+function constructOption(nombre, index)
 {
-  return (<option value={nombre}>{nombre}</option>);
+  return (<option value={nombre} key={index}>{nombre}</option>);
 }
 
-function constructAnimalCard(nombre, descripcion)
+function constructAnimalCard(item, index)
 {
   return (
-    <div className="my-card col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+    <div className="my-card col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12" key={index}>
       <div className="hover hover-2 text-white rounded"><img src="" alt=""/>
         <div className="hover-overlay"></div>
         <div className="hover-2-content px-5 py-4">
           <h3 className="hover-2-title text-uppercase font-weight-bold mb-0"> 
-            <span className="font-weight-light">{nombre}</span>
+            <span className="font-weight-light">{item.nombre}</span>
           </h3>
           <p className="hover-2-description text-uppercase mb-0">
-            {descripcion}
+            {item.descripcion}
           </p>
+          <img src={item.imagen} alt="Imagen del gatito" />
         </div>
       </div>  
     </div>
@@ -58,7 +59,7 @@ class PagAdoptar extends Component{
             Elija cual NO incluir:
             <select value={this.state.value} onChange={this.handleChange}>
               {AnimalItems.map((item,index) => {
-                return constructOption(item.nombre)
+                return constructOption(item.nombre, index)
               })}
             </select>         
           </label>
@@ -68,12 +69,12 @@ class PagAdoptar extends Component{
           <div className="catalogo">
             <div className="catalogo-container">
               {/* Bootstrap */}
-              <div class="container">
+              <div className="container">
                 <div className="row">
                     {/* Logica iterable con styling */}
                     {AnimalItems.map((item,index) => {
                       if(item.nombre != this.state.value) 
-                        return constructAnimalCard(item.nombre, item.descripcion)
+                        return constructAnimalCard(item, index)
                     })}
                 </div>
               </div>
