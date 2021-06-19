@@ -2,56 +2,81 @@ import React, {Component} from 'react';
 import './Adoptar.css';
 import { AnimalItems } from '../../../fakeBackEnd/animalsCatalog.js';
 
+function constructOption(nombre)
+{
+  return (<option value={nombre}>{nombre}</option>);
+}
+
+function constructAnimalCard(nombre, descripcion)
+{
+  return (
+    <div className="my-card col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+      <div className="hover hover-2 text-white rounded"><img src="" alt=""/>
+        <div className="hover-overlay"></div>
+        <div className="hover-2-content px-5 py-4">
+          <h3 className="hover-2-title text-uppercase font-weight-bold mb-0"> 
+            <span className="font-weight-light">{nombre}</span>
+          </h3>
+          <p className="hover-2-description text-uppercase mb-0">
+            {descripcion}
+          </p>
+        </div>
+      </div>  
+    </div>
+  );
+}
 
 class PagAdoptar extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 'hola'
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+    console.log(this.state.value);
+  }
+
+  handleSubmit(event) {
+    alert('An essay was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+
   elementsInRow = 0;
 
   render(){
     return(
       <div className="pag-adoptar">
+        <p>{this.state.value}</p>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Elija cual NO incluir:
+            <select value={this.state.value} onChange={this.handleChange}>
+              {AnimalItems.map((item,index) => {
+                return constructOption(item.nombre)
+              })}
+            </select>         
+          </label>
+          {/* <input type="submit" value="Submit" /> */}
+        </form>
         <div className="adoptar-container">
           <div className="catalogo">
             <div className="catalogo-container">
-
               {/* Bootstrap */}
               <div class="container">
-
                 <div className="row">
-
-
-      
                     {/* Logica iterable con styling */}
                     {AnimalItems.map((item,index) => {
-                      return(
-                        <div className="my-card col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                          <div className="hover hover-2 text-white rounded"><img src="" alt=""/>
-                            <div className="hover-overlay"></div>
-                            <div className="hover-2-content px-5 py-4">
-                              <h3 className="hover-2-title text-uppercase font-weight-bold mb-0"> 
-                                <span className="font-weight-light">{item.nombre}</span>
-                              </h3>
-                              <p className="hover-2-description text-uppercase mb-0">
-                                {item.descripcion}
-                              </p>
-                            </div>
-                          </div>  
-                        </div>
-                      );
+                      if(item.nombre != this.state.value) 
+                        return constructAnimalCard(item.nombre, item.descripcion)
                     })}
-
-
-
-
-
-
                 </div>
-
-
-
               </div>
-
-
-
             </div>
           </div>
         </div>
