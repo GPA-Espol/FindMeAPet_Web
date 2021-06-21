@@ -2,9 +2,12 @@ import React, {Component} from 'react';
 import './Adoptar.css';
 import { AnimalItems } from '../../../fakeBackEnd/animalsCatalog.js';
 
-function constructOption(nombre, index)
+const colores = ['gris', "blanco", 'cafe', 'negro', 'naranja', 'crema'];
+const sexo = ['M', 'F'];
+
+function constructOption(value, index)
 {
-  return (<option value={nombre} key={index}>{nombre}</option>);
+  return (<option value={value} key={index}>{value}</option>);
 }
 
 function constructAnimalCard(item, index)
@@ -31,7 +34,9 @@ class PagAdoptar extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      value: 'hola'
+      value: 'Todos',
+      color: 'Todos',
+      sexo: 'Todos',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -39,12 +44,14 @@ class PagAdoptar extends Component{
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
-    console.log(this.state.value);
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+    console.log(event.target.name)
   }
 
   handleSubmit(event) {
-    alert('An essay was submitted: ' + this.state.value);
+    console.log(this.state)
     event.preventDefault();
   }
 
@@ -53,17 +60,41 @@ class PagAdoptar extends Component{
   render(){
     return(
       <div className="pag-adoptar">
-        <p>{this.state.value}</p>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Elija cual NO incluir:
-            <select value={this.state.value} onChange={this.handleChange}>
-              {AnimalItems.map((item,index) => {
-                return constructOption(item.nombre, index)
-              })}
-            </select>         
-          </label>
-          {/* <input type="submit" value="Submit" /> */}
+        <form onSubmit={this.handleSubmit} className="container">
+          <div className="row row-cols-auto flex-column flex-sm-row justify-content-center text-center">
+            <label className="col">
+              Filtro 1:
+              <select value={this.state.value} onChange={this.handleChange} name="value" className="ms-2">
+                <option value='Todos'>Todos</option>
+                {AnimalItems.map((item,index) => {
+                  return constructOption(item.nombre, index)
+                })}
+              </select>         
+            </label>
+            
+            <label className="col">
+              Color:
+              <select value={this.state.color} onChange={this.handleChange} name="color" className="ms-2">
+                <option value='Todos'>Todos</option>
+                {colores.map((item,index) => {
+                  return constructOption(item, index)
+                })}
+              </select>         
+            </label>
+            <label className="col">
+              Sexo:
+              <select value={this.state.sexo} onChange={this.handleChange} name="sexo" className="ms-2">
+                <option value='Todos'>Todos</option>
+                {sexo.map((item,index) => {
+                  return constructOption(item, index)
+                })}
+              </select>         
+            </label>
+            <div className="col">
+              <input type="submit" value="Submit" />
+            </div>
+          </div>
+          
         </form>
         <div className="adoptar-container">
           <div className="catalogo">
@@ -73,7 +104,7 @@ class PagAdoptar extends Component{
                 <div className="row">
                     {/* Logica iterable con styling */}
                     {AnimalItems.map((item,index) => {
-                      if(item.nombre != this.state.value) 
+                      if(this.state.value === "Todos" || item.nombre != this.state.value) 
                         return constructAnimalCard(item, index)
                     })}
                 </div>
