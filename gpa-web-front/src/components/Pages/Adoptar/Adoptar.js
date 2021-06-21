@@ -30,7 +30,10 @@ function constructAnimalCard(item, index)
   );
 }
 
+
+
 class PagAdoptar extends Component{
+
   constructor(props) {
     super(props);
     this.state = {
@@ -54,8 +57,6 @@ class PagAdoptar extends Component{
     console.log(this.state)
     event.preventDefault();
   }
-
-  elementsInRow = 0;
 
   render(){
     return(
@@ -106,6 +107,7 @@ class PagAdoptar extends Component{
                     {AnimalItems.map((item,index) => {
                       if(this.state.value === "Todos" || item.nombre != this.state.value) 
                         return constructAnimalCard(item, index)
+                      return <span className="d-none" key={index}></span>
                     })}
                 </div>
               </div>
