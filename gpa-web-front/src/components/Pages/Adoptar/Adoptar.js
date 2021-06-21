@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import './Adoptar.css';
 import { AnimalItems } from '../../../fakeBackEnd/animalsCatalog.js';
 
-const colores = ['gris', "blanco", 'cafe', 'negro', 'naranja', 'crema'];
-const sexo = ['M', 'F'];
+const colores = ['Gris', "Blanco", 'Cafe', 'Negro', 'Naranja', 'Crema'];
+const sexo = ['Macho', 'Hembra'];
+const edades = ['Gatito', 'Adulto', 'Mayor'];
 
 function constructOption(value, index)
 {
@@ -37,7 +38,7 @@ class PagAdoptar extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      value: 'Todos',
+      edad: 'Todos',
       color: 'Todos',
       sexo: 'Todos',
     };
@@ -50,7 +51,6 @@ class PagAdoptar extends Component{
     this.setState({
       [event.target.name]: event.target.value,
     });
-    console.log(event.target.name)
   }
 
   handleSubmit(event) {
@@ -64,11 +64,11 @@ class PagAdoptar extends Component{
         <form onSubmit={this.handleSubmit} className="container">
           <div className="row row-cols-auto flex-column flex-sm-row justify-content-center text-center">
             <label className="col">
-              Filtro 1:
-              <select value={this.state.value} onChange={this.handleChange} name="value" className="ms-2">
+              Edad:
+              <select value={this.state.edad} onChange={this.handleChange} name="edad" className="ms-2">
                 <option value='Todos'>Todos</option>
-                {AnimalItems.map((item,index) => {
-                  return constructOption(item.nombre, index)
+                {edades.map((item,index) => {
+                  return constructOption(item, index)
                 })}
               </select>         
             </label>
@@ -105,8 +105,12 @@ class PagAdoptar extends Component{
                 <div className="row">
                     {/* Logica iterable con styling */}
                     {AnimalItems.map((item,index) => {
-                      if(this.state.value === "Todos" || item.nombre != this.state.value) 
-                        return constructAnimalCard(item, index)
+                      // TODO> Refactoring para mejores condiciones
+                      let isEdad = (this.state.edad == item.edad || this.state.edad === "Todos");
+                      let isColor = (this.state.color == item.color || this.state.color === "Todos");
+                      let isSexo = (this.state.sexo == item.sexo || this.state.sexo === "Todos");
+                      if(isColor && isEdad && isSexo)
+                        return constructAnimalCard(item, index);
                       return <span className="d-none" key={index}></span>
                     })}
                 </div>
