@@ -27,11 +27,15 @@ function constructAnimalCard(item, index)
   );
 }
 
+
+
 class PagAdoptar extends Component{
+
   constructor(props) {
     super(props);
     this.state = {
-      value: 'hola'
+      value: 'hola',
+      color: 'hola2'
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -47,8 +51,6 @@ class PagAdoptar extends Component{
     alert('An essay was submitted: ' + this.state.value);
     event.preventDefault();
   }
-
-  elementsInRow = 0;
 
   render(){
     return(
