@@ -89,8 +89,6 @@
   
 }
 
-
-
 .hover img {
   width: 100%;
   position: absolute;
@@ -103,6 +101,19 @@
   position: relative;
    z-index: 99;
  }
+
+ 
+.no-results {
+  display: flex; 
+  align-content: center;
+}
+
+ 
+.cat-image {
+   height: 100%;
+}
+ 
+
 
 
 /* /1* The configuration of the our demo ============================== *1/ */

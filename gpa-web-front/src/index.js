@@ -5,6 +5,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals'; 
 
+/**
+ * The render method for the ReactDOM renders the whole (single page) application
+ */
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -2,8 +2,8 @@ export const AnimalItems = [
   {
     "nombre": "Gatito 1",
     "descripcion": "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.", 
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
-    "color": "Gris", 
+    "imagen": "/Catalog/Gato_3.jpg",
+    "color": "Cafe", 
     "sexo": "Macho", 
     "edad": "Adulto", 
     "url": "/"
@@ -11,8 +11,8 @@ export const AnimalItems = [
   {
     "nombre": "Gatito 2",
     "descripcion": "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.", 
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
-    "color": "Blanco", 
+    "imagen": "/Catalog/Gato_10.jpg",
+    "color": "Naranja", 
     "sexo": "Macho", 
     "edad": "Adulto", 
     "url": "/"
@@ -20,8 +20,8 @@ export const AnimalItems = [
   {
     "nombre": "Gatito 3",
     "descripcion": "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.", 
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
-    "color": "Negro", 
+    "imagen": "/Catalog/Gato_12.jpg",
+    "color": "Cafe", 
     "sexo": "Hembra", 
     "edad": "Gatito", 
     "url": "/"
@@ -29,8 +29,8 @@ export const AnimalItems = [
   {
     "nombre": "Gatito 4",
     "descripcion": "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.", 
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
-    "color": "Naranja", 
+    "imagen": "/Catalog/Gato_15.jpg",
+    "color": "Cafe", 
     "sexo": "Hembra", 
     "edad": "Adulto", 
     "url": "/"
@@ -38,7 +38,7 @@ export const AnimalItems = [
   {
     "nombre": "Gatito 5",
     "descripcion": "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.", 
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
+    "imagen": "/Catalog/Gato_18.jpg",
     "color": "Blanco", 
     "sexo": "Hembra", 
     "edad": "Gatito", 
@@ -47,8 +47,8 @@ export const AnimalItems = [
   {
     "nombre": "Gatito 6",
     "descripcion": "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.", 
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
-    "color": "Blanco", 
+    "imagen": "/Catalog/Gato_21_1.jpg",
+    "color": "Naranja", 
     "sexo": "Macho", 
     "edad": "Adulto", 
     "url": "/"
@@ -56,8 +56,8 @@ export const AnimalItems = [
   {
     "nombre": "Gatito 7",
     "descripcion": "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.", 
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
-    "color": "Negro", 
+    "imagen": "/Catalog/Gato_25.jpg",
+    "color": "Blanco", 
     "sexo": "Macho", 
     "edad": "Mayor", 
     "url": "/"
@@ -65,8 +65,8 @@ export const AnimalItems = [
   {
     "nombre": "Gatito 8",
     "descripcion": "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.", 
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
-    "color": "Gris", 
+    "imagen": "/Catalog/Gato_26.jpg",
+    "color": "Cafe", 
     "sexo": "Hembra", 
     "edad": "Mayor", 
     "url": "/"
@@ -74,8 +74,8 @@ export const AnimalItems = [
   {
     "nombre": "Gatito 9",
     "descripcion": "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.", 
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
-    "color": "Naranja", 
+    "imagen": "/Catalog/Gato_27.jpg",
+    "color": "Negro", 
     "sexo": "Macho", 
     "edad": "Mayor", 
     "url": "/"
@@ -83,7 +83,7 @@ export const AnimalItems = [
   {
     "nombre": "Gatito 10",
     "descripcion": "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.", 
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
+    "imagen": "/Catalog/Gato_28.jpg",
     "color": "Naranja", 
     "sexo": "Macho", 
     "edad": "Adulto", 
@@ -92,8 +92,8 @@ export const AnimalItems = [
   {
     "nombre": "Gatito 11",
     "descripcion": "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.", 
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
-    "color": "Crema", 
+    "imagen": "/Catalog/Gato_32.jpg",
+    "color": "Cafe", 
     "sexo": "Hembra", 
     "edad": "Adulto", 
     "url": "/"
@@ -101,8 +101,8 @@ export const AnimalItems = [
   {
     "nombre": "Gatito 12",
     "descripcion": "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.", 
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
-    "color": "Cafe", 
+    "imagen": "/Catalog/Gato_33.jpg",
+    "color": "Gris", 
     "sexo": "Macho", 
     "edad": "Gatito", 
     "url": "/"

@@ -1,3 +1,5 @@
+// TODO: Refactoring para mejor mantenibilidad
+
 import React, {Component} from 'react';
 import './Adoptar.css';
 import { AnimalItems } from '../../../fakeBackEnd/animalsCatalog.js';
@@ -14,7 +16,7 @@ function constructOption(value, index)
 function constructAnimalCard(item, index)
 {
   return (
-    <div className="my-card col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12" key={index}>
+    <div className="my-card col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12" key={index}>
       <div className="hover hover-2 text-white rounded"><img src="" alt=""/>
         <div className="hover-overlay"></div>
         <div className="hover-2-content px-5 py-4">
@@ -24,7 +26,7 @@ function constructAnimalCard(item, index)
           <p className="hover-2-description text-uppercase mb-0">
             {item.descripcion}
           </p>
-          <img src={item.imagen} alt="Imagen del gatito" />
+          <img className="cat-image" src={item.imagen} alt="Imagen del gatito" />
         </div>
       </div>  
     </div>
@@ -42,12 +44,15 @@ class PagAdoptar extends Component{
       color: 'Color',
       sexo: 'Sexo',
     };
+    
+    this.noResults = true;
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
+    this.noResults = true;
     this.setState({
       [event.target.name]: event.target.value,
     });
@@ -56,6 +61,19 @@ class PagAdoptar extends Component{
   handleSubmit(event) {
     console.log(this.state)
     event.preventDefault();
+  }
+  
+  checkResults(noResults) {
+    let noResultsMessage = (
+      <div className="no-results">
+        <p>No hay gatitos con esas caractrísticas (por ahora :))!</p>
+      </div>
+    )
+
+    if (noResults) {
+      return noResultsMessage; 
+    }
+    return (<span className="d-none"></span>);
   }
 
   render(){
@@ -114,7 +132,7 @@ class PagAdoptar extends Component{
             <form onSubmit={this.handleSubmit}>
               <div className="row row-cols-auto flex-column flex-sm-row justify-content-center text-center">
                 <label className="col">
-                  <select value={this.state.edad} onChange={this.handleChange} name="edad" className="form-select ms-2">
+                  <select value={this.state.edad} onChange={this.handleChange} name="edad" className="form-select ms-0">
                     <option value='Edad'>Edad</option>
                     {edades.map((item,index) => {
                       return constructOption(item, index)
@@ -123,7 +141,7 @@ class PagAdoptar extends Component{
                 </label>
                 
                 <label className="col">
-                  <select value={this.state.color} onChange={this.handleChange} name="color" className="form-select ms-2">
+                  <select value={this.state.color} onChange={this.handleChange} name="color" className="form-select ms-0">
                     <option value='Color'>Color</option>
                     {colores.map((item,index) => {
                       return constructOption(item, index)
@@ -131,7 +149,7 @@ class PagAdoptar extends Component{
                   </select>         
                 </label>
                 <label className="col">
-                  <select value={this.state.sexo} onChange={this.handleChange} name="sexo" className="form-select ms-2">
+                  <select value={this.state.sexo} onChange={this.handleChange} name="sexo" className="form-select ms-0">
                     <option value='Sexo'>Sexo</option>
                     {sexo.map((item,index) => {
                       return constructOption(item, index)
@@ -151,18 +169,26 @@ class PagAdoptar extends Component{
               <div className="catalogo-container">
                 {/* Bootstrap */}
                 <div className="container">
+
                   <div className="row">
+
                       {/* Logica iterable con styling */}
                       {AnimalItems.map((item,index) => {
-                        // TODO: Refactoring para mejores condiciones
+
                         let isEdad = (this.state.edad === item.edad || this.state.edad === "Edad");
                         let isColor = (this.state.color === item.color || this.state.color === "Color");
                         let isSexo = (this.state.sexo === item.sexo || this.state.sexo === "Sexo");
-                        if(isColor && isEdad && isSexo)
+
+                        if (isColor && isEdad && isSexo) {
+                          this.noResults = false;
                           return constructAnimalCard(item, index);
+                        }
                         return <span className="d-none" key={index}></span>
                       })}
+                      {this.checkResults(this.noResults)}
+
                   </div>
+
                 </div>
               </div>
             </div>
@@ -172,11 +198,6 @@ class PagAdoptar extends Component{
     )
   }
 }
-
-
-
-
-
 
 
                     {/* Lógica iterable para las tarjetas */}
