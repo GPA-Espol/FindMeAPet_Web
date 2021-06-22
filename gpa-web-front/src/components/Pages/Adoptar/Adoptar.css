@@ -12,7 +12,7 @@
 
 /* Para el TimeLine */
 .hori-timeline .events {
-  border-top: 3px solid #7C3C21!important;;
+  border-top: 3px solid #fff!important;
 }
 .hori-timeline .events .event-list {
   display: block;
@@ -21,23 +21,18 @@
   padding-top: 70px;
   margin-right: 0;
 }
-.hori-timeline .events .event-list:before {
-  content: "";
-  position: absolute;
-  height: 36px;
-  border-right: 2px dashed #dee2e6;
-  top: 0;
-}
+
 .hori-timeline .events .event-list .event-date {
   position: absolute;
   top: 38px;
   left: 0;
   right: 0;
-  width: 75px;
+  width: 30px;
   margin: 0 auto;
-  border-radius: 4px;
+  border-radius: 50%;
   padding: 2px 4px;
 }
+
 @media (min-width: 770px) {
   .hori-timeline ul {
     display: flex;
@@ -45,11 +40,17 @@
   }
   .hori-timeline .events .event-list {
       display: inline-block!important;
-      width: 24%;
+      width: 28%;
       padding-top: 45px;
+      padding-left: 20px;
+      padding-right: 20px;
   }
   .hori-timeline .events .event-list .event-date {
-      top: -12px;
+      top: -15px;
+  }
+
+  .hori-timeline .events {
+    border-top: 3px solid #7C3C21!important;
   }
 }
 /* /1* General settings ============================== *1/ */
