@@ -38,9 +38,9 @@ class PagAdoptar extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      edad: 'Todos',
-      color: 'Todos',
-      sexo: 'Todos',
+      edad: 'Edad',
+      color: 'Color',
+      sexo: 'Sexo',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -60,65 +60,115 @@ class PagAdoptar extends Component{
 
   render(){
     return(
-      <div className="pag-adoptar">
-        <form onSubmit={this.handleSubmit} className="container">
-          <div className="row row-cols-auto flex-column flex-sm-row justify-content-center text-center">
-            <label className="col">
-              Edad:
-              <select value={this.state.edad} onChange={this.handleChange} name="edad" className="ms-2">
-                <option value='Todos'>Todos</option>
-                {edades.map((item,index) => {
-                  return constructOption(item, index)
-                })}
-              </select>         
-            </label>
-            
-            <label className="col">
-              Color:
-              <select value={this.state.color} onChange={this.handleChange} name="color" className="ms-2">
-                <option value='Todos'>Todos</option>
-                {colores.map((item,index) => {
-                  return constructOption(item, index)
-                })}
-              </select>         
-            </label>
-            <label className="col">
-              Sexo:
-              <select value={this.state.sexo} onChange={this.handleChange} name="sexo" className="ms-2">
-                <option value='Todos'>Todos</option>
-                {sexo.map((item,index) => {
-                  return constructOption(item, index)
-                })}
-              </select>         
-            </label>
-            <div className="col">
-              <input type="submit" value="Submit" />
-            </div>
-          </div>
-          
-        </form>
-        <div className="adoptar-container">
-          <div className="catalogo">
-            <div className="catalogo-container">
-              {/* Bootstrap */}
-              <div className="container">
-                <div className="row">
-                    {/* Logica iterable con styling */}
-                    {AnimalItems.map((item,index) => {
-                      // TODO> Refactoring para mejores condiciones
-                      let isEdad = (this.state.edad == item.edad || this.state.edad === "Todos");
-                      let isColor = (this.state.color == item.color || this.state.color === "Todos");
-                      let isSexo = (this.state.sexo == item.sexo || this.state.sexo === "Todos");
-                      if(isColor && isEdad && isSexo)
-                        return constructAnimalCard(item, index);
-                      return <span className="d-none" key={index}></span>
-                    })}
+      <React.Fragment>
+        <section id="proceso-adopcion">
+          <div className="container pt-5 pb-3">
+            <div className="row">
+              <div className="col-12 text-center">
+                <p className="fs-1 text-white">¡Tú puedes hacer la diferencia!</p>
+                <div className="d-flex justify-content-center">
+                  <div className="border-top border-white border-4 text-transparent">aaaaaaa</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+          <div className="container">
+            <div className="row">
+                <div className="col-lg-12">
+                    <div className="card bg-white-orange">
+                        <div className="card-body">
+                            <div className="hori-timeline" dir="ltr">
+                                <ul className="list-inline events">
+                                    <li className="list-inline-item event-list">
+                                        <div className="px-2">
+                                            <div className="event-date bg-soft-primary fw-bold text-white bg-orange">1</div>
+                                            <h5 className="font-size-16 pb-3">Elige tu mascota ideal</h5>
+                                            <p className="text-muted">Selecciona tu nuevo compañero en la sección de animales disponibles</p>
+                                        </div>
+                                    </li>
+                                    <li className="list-inline-item event-list">
+                                        <div className="px-2">
+                                            <div className="event-date bg-soft-primary fw-bold text-white bg-orange">2</div>
+                                            <h5 className="font-size-16 pb-3">Llena el formulario</h5>
+                                            <p className="text-muted">Contesta las preguntas del formulario que nos permite conocerte un poco más</p>
+                                        </div>
+                                    </li>
+                                    <li className="list-inline-item event-list">
+                                        <div className="px-2">
+                                            <div className="event-date bg-soft-primary fw-bold text-white bg-orange">3</div>
+                                            <h5 className="font-size-16 pb-3">Espera confirmación</h5>
+                                            <p className="text-muted">Espera a que te contactemos para la entrega tu nuevo compañero de vida</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff5ee" fill-opacity="1" d="M0,192L48,208C96,224,192,256,288,250.7C384,245,480,203,576,197.3C672,192,768,224,864,245.3C960,267,1056,277,1152,272C1248,267,1344,245,1392,234.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </section>
+        <section id="elige-mascota">
+          <div className="container pb-3">
+            <form onSubmit={this.handleSubmit}>
+              <div className="row row-cols-auto flex-column flex-sm-row justify-content-center text-center">
+                <label className="col">
+                  <select value={this.state.edad} onChange={this.handleChange} name="edad" className="form-select ms-2">
+                    <option value='Edad'>Edad</option>
+                    {edades.map((item,index) => {
+                      return constructOption(item, index)
+                    })}
+                  </select>         
+                </label>
+                
+                <label className="col">
+                  <select value={this.state.color} onChange={this.handleChange} name="color" className="form-select ms-2">
+                    <option value='Color'>Color</option>
+                    {colores.map((item,index) => {
+                      return constructOption(item, index)
+                    })}
+                  </select>         
+                </label>
+                <label className="col">
+                  <select value={this.state.sexo} onChange={this.handleChange} name="sexo" className="form-select ms-2">
+                    <option value='Sexo'>Sexo</option>
+                    {sexo.map((item,index) => {
+                      return constructOption(item, index)
+                    })}
+                  </select>         
+                </label>
+                {/* <div className="col">
+                  <input type="submit" value="Submit" />
+                </div> */}
+              </div>
+              
+            </form>
+          </div>
+          
+          <div className="adoptar-container">
+            <div className="catalogo">
+              <div className="catalogo-container">
+                {/* Bootstrap */}
+                <div className="container">
+                  <div className="row">
+                      {/* Logica iterable con styling */}
+                      {AnimalItems.map((item,index) => {
+                        // TODO: Refactoring para mejores condiciones
+                        let isEdad = (this.state.edad === item.edad || this.state.edad === "Edad");
+                        let isColor = (this.state.color === item.color || this.state.color === "Color");
+                        let isSexo = (this.state.sexo === item.sexo || this.state.sexo === "Sexo");
+                        if(isColor && isEdad && isSexo)
+                          return constructAnimalCard(item, index);
+                        return <span className="d-none" key={index}></span>
+                      })}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </React.Fragment>
     )
   }
 }

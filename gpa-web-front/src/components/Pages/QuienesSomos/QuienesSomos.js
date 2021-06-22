@@ -15,7 +15,7 @@ class QuienesSomos extends Component
       <React.Fragment>
         <section id="quienes-somos" style={{ backgroundImage: "url(/paw_wallpaper_bw.jpg)" }}>
           <div className="container-fluid">
-            <div className="container py-5">
+            <div className="container pt-5">
               <div className="row">
                 <div className="col-12 text-center">
                   <p className="fs-1 text-coffee">¿Quiénes somos?</p>
@@ -26,7 +26,7 @@ class QuienesSomos extends Component
               </div>
               <div className="row justify-content-center">
                 <div className="col-10">
-                  <p className="pb-4 text-coffee fs-5 text-justify">
+                  <p className="pb-4 text-coffee fs-5 text-justify fw-bold">
                     GPA Claudia Poppe nace a partir de la necesidad de velar por los que no tienen voz, nuestros animalitos de ESPOL. Somos un grupo de personas comprometidas con el bienestar de los animales, principalmente por los que se encuentran dentro del Campus, promovemos la esterilización, la adopción, el cuidado y la tenencia responsable de mascotas.
                   </p>
                 </div>

@@ -1,50 +1,57 @@
-
-
-.container {
-  padding: 5px;
-  /* display: flex!important; */
-  /* align-content: center!important; */
-  /* align-items: center!important; */
-  /* padding: 0!important; */
-  /* margin: 0!important; */
+#proceso-adopcion {
+  background-color: #EC823A;
 }
 
-.row {
-  width: 100%;
-  margin: 0;
+.bg-orange {
+  background-color: #EC823A;
 }
 
-.card{
-  /* margin: 5px; */
-  height: 300px;
-  padding: 0%;
-  border-width: 10px;
-  border-color: blue;
-
-  /* Para que haya un piti de espacio entre las cartas verticalemente*/
-  margin-top: 2px;
-  margin-bottom: 2px;
+.bg-white-orange {
+  background-color: #fff5ee;
 }
 
-
-
-/* .card-body{
-  padding: 0;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Para el TimeLine */
+.hori-timeline .events {
+  border-top: 3px solid #7C3C21!important;;
+}
+.hori-timeline .events .event-list {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding-top: 70px;
+  margin-right: 0;
+}
+.hori-timeline .events .event-list:before {
+  content: "";
+  position: absolute;
+  height: 36px;
+  border-right: 2px dashed #dee2e6;
+  top: 0;
+}
+.hori-timeline .events .event-list .event-date {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  right: 0;
+  width: 75px;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+@media (min-width: 770px) {
+  .hori-timeline ul {
+    display: flex;
+    justify-content: center;
+  }
+  .hori-timeline .events .event-list {
+      display: inline-block!important;
+      width: 24%;
+      padding-top: 45px;
+  }
+  .hori-timeline .events .event-list .event-date {
+      top: -12px;
+  }
+}
 /* /1* General settings ============================== *1/ */
 
 /* Este es mío */
