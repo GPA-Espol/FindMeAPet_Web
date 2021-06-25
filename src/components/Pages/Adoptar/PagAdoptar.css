@@ -1,0 +1,155 @@
+#proceso-adopcion {
+  background-color: #ec823a;
+}
+
+.bg-orange {
+  background-color: #ec823a;
+}
+
+.bg-white-orange {
+  background-color: #fff5ee;
+}
+
+/* Para el TimeLine */
+.hori-timeline .events {
+  border-top: 3px solid #fff !important;
+}
+.hori-timeline .events .event-list {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding-top: 70px;
+  margin-right: 0;
+}
+
+.hori-timeline .events .event-list .event-date {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  right: 0;
+  width: 30px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 2px 4px;
+}
+
+@media (min-width: 770px) {
+  .hori-timeline ul {
+    display: flex;
+    justify-content: center;
+  }
+  .hori-timeline .events .event-list {
+    display: inline-block !important;
+    width: 28%;
+    padding-top: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hori-timeline .events .event-list .event-date {
+    top: -15px;
+  }
+
+  .hori-timeline .events {
+    border-top: 3px solid #7c3c21 !important;
+  }
+}
+
+
+
+/* /1* General settings ============================== *1/ */
+
+/* Este es mío */
+.my-card {
+  /* margin: 5px; */
+  height: 300px;
+  /* padding: 0%;
+  border-width: 10px;
+  border-color: blue;
+
+  /* Para que haya un piti de espacio entre las cartas verticalemente*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.my-card:focus {
+  /* outline: 3px solid #7c3c21; */
+  background: linear-gradient(to top, rgb(177, 21, 21)0.4), rgba(0, 0, 0, 0.1);
+}
+
+
+
+.hover {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60%;
+
+  /* JF: */
+  width: 100%;
+  height: 100%;
+}
+
+.hover-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  transition: all 0.4s;
+}
+
+.hover img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hover-content {
+  position: relative;
+  z-index: 99;
+}
+
+.cat-image {
+  height: 100%;
+}
+
+/* /1* The configuration of the our demo ============================== *1/ */
+.hover-2 .hover-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+}
+
+.hover-2-title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.hover-2-description {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  text-align: center;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.hover-2:hover .hover-2-title {
+  transform: translateY(-1.5rem);
+}
+
+.hover-2:hover .hover-2-description {
+  bottom: 0.5rem;
+  opacity: 1;
+}
+
+.hover-2:hover .hover-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+}

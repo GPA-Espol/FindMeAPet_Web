@@ -1,0 +1,59 @@
+.home-banner-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: rgba(0,0,0,0.4);
+  background-blend-mode: darken;
+  /* background-attachment: fixed; */
+}
+
+.bg-gray {
+  background-color: #E8E4E1;
+}
+
+.como-ayudamos-section {
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: luminosity;
+  background-color: #EC823A;
+}
+
+.text-orange {
+  color: #EC823A!important;
+}
+
+.text-coffee {
+  color: #7C3C21!important;
+}
+
+.text-gray {
+  color: #E8E4E1;
+}
+
+.border-coffee {
+  border-color: #7C3C21!important;
+}
+
+.header-giant {
+  font-size: calc(2rem + 3vw)!important;
+}
+
+.header-big {
+  font-size: calc(1.85rem + 1.75vw)!important;
+}
+
+.border-none {
+  border: none;
+}
+
+.icon-main-page {
+  border: #EC823A solid;
+  border-radius: 50%;
+  padding: 20px;
+  background-color: #EC823A;
+  width: 1em !important;
+}
+

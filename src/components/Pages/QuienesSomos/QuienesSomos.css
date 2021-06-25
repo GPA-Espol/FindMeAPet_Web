@@ -1,0 +1,37 @@
+#quienes-somos {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
+  background-color: #ffffff59;
+}
+
+.text-transparent {
+  color: rgba(255, 255, 255, 0);
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+#que-hacemos {
+  margin-top: 2rem !important;
+  margin-bottom: 8rem !important;
+}
+
+.no-bullets {
+  list-style-type: none;
+}
+
+#que-hacemos-list li {
+  margin-bottom: 10px;
+}
+
+.orange-shadow {
+  box-shadow: -14px 10px 0px 1px #ec823a80;
+}
+
+#nuestro-equipo {
+  background-color: #EC823A;
+}
