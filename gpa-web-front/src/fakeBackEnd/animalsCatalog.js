@@ -1,6 +1,6 @@
 export const AnimalItems = [
   {
-    nombre: "Gatito 1",
+    nombre: "Peluso",
     descripcion:
       "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
     imagen: "/Catalog/Gato_3.jpg",
@@ -10,7 +10,7 @@ export const AnimalItems = [
     url: "/",
   },
   {
-    nombre: "Gatito 2",
+    nombre: "Teito",
     descripcion:
       "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
     imagen: "/Catalog/Gato_10.jpg",
@@ -20,7 +20,7 @@ export const AnimalItems = [
     url: "/",
   },
   {
-    nombre: "Gatito 3",
+    nombre: "Mimi",
     descripcion:
       "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
     imagen: "/Catalog/Gato_12.jpg",
@@ -30,7 +30,7 @@ export const AnimalItems = [
     url: "/",
   },
   {
-    nombre: "Gatito 4",
+    nombre: "Cenicienta",
     descripcion:
       "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
     imagen: "/Catalog/Gato_15.jpg",
@@ -40,7 +40,7 @@ export const AnimalItems = [
     url: "/",
   },
   {
-    nombre: "Gatito 5",
+    nombre: "Empanada",
     descripcion:
       "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
     imagen: "/Catalog/Gato_18.jpg",
@@ -50,7 +50,7 @@ export const AnimalItems = [
     url: "/",
   },
   {
-    nombre: "Gatito 6",
+    nombre: "Maluco",
     descripcion:
       "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
     imagen: "/Catalog/Gato_21_1.jpg",
@@ -60,7 +60,7 @@ export const AnimalItems = [
     url: "/",
   },
   {
-    nombre: "Gatito 7",
+    nombre: "Michu",
     descripcion:
       "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
     imagen: "/Catalog/Gato_25.jpg",
@@ -70,7 +70,7 @@ export const AnimalItems = [
     url: "/",
   },
   {
-    nombre: "Gatito 8",
+    nombre: "Mishi",
     descripcion:
       "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
     imagen: "/Catalog/Gato_26.jpg",
@@ -80,7 +80,7 @@ export const AnimalItems = [
     url: "/",
   },
   {
-    nombre: "Gatito 9",
+    nombre: "Juno",
     descripcion:
       "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
     imagen: "/Catalog/Gato_27.jpg",
@@ -90,7 +90,7 @@ export const AnimalItems = [
     url: "/",
   },
   {
-    nombre: "Gatito 10",
+    nombre: "Nemo",
     descripcion:
       "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
     imagen: "/Catalog/Gato_28.jpg",
@@ -100,7 +100,7 @@ export const AnimalItems = [
     url: "/",
   },
   {
-    nombre: "Gatito 11",
+    nombre: "Cookie",
     descripcion:
       "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
     imagen: "/Catalog/Gato_32.jpg",
@@ -110,7 +110,7 @@ export const AnimalItems = [
     url: "/",
   },
   {
-    nombre: "Gatito 12",
+    nombre: "Ozzy",
     descripcion:
       "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
     imagen: "/Catalog/Gato_33.jpg",
