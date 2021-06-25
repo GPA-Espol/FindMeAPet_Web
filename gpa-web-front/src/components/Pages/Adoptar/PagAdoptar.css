@@ -53,6 +53,9 @@
     border-top: 3px solid #7c3c21 !important;
   }
 }
+
+
+
 /* /1* General settings ============================== *1/ */
 
 /* Este es mío */
@@ -69,8 +72,11 @@
 }
 
 .my-card:focus {
-  outline: 3px solid #7c3c21;
+  /* outline: 3px solid #7c3c21; */
+  background: linear-gradient(to top, rgb(177, 21, 21)0.4), rgba(0, 0, 0, 0.1);
 }
+
+
 
 .hover {
   overflow: hidden;
