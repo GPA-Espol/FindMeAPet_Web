@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import './PagUnete.css';
 
 
+/**
+ * PagUnete.
+ * Class for the "Unete" view
+ * @extends {Component}
+ */
 class PagUnete extends Component{
 
   render(){

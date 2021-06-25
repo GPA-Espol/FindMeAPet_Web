@@ -69,9 +69,14 @@ class PagAdoptar extends Component {
     this.noResults = true;
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
+  /**
+   * handleChange: 
+   * This Function listens for any async changes in order to change state
+   * @param {any} event
+   */
   handleChange(event) {
     this.noResults = true;
     this.setState({
@@ -79,11 +84,13 @@ class PagAdoptar extends Component {
     });
   }
 
-  handleSubmit(event) {
-    console.log(this.state);
-    event.preventDefault();
-  }
 
+  /**
+   * checkResults:
+   * This method checks to see if the filtering options return any results.
+   * If not, it'll render an appropiate message.
+   * @param {boolean} noResults
+   */
   checkResults(noResults) {
     let noResultsMessage = (
       <div className="no-results">
