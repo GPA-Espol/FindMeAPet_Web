@@ -1,13 +1,19 @@
 // TODO: Refactoring para mejor mantenibilidad
 
-import React, {Component} from 'react';
-import './Adoptar.css';
-import { AnimalItems } from '../../../fakeBackEnd/animalsCatalog.js';
+import React, { Component } from "react";
+import "./Adoptar.css";
+import { AnimalItems } from "../../../fakeBackEnd/animalsCatalog.js";
 
 const colores = ["Gris", "Blanco", "Cafe", "Negro", "Naranja", "Crema"];
 const sexo = ["Macho", "Hembra"];
 const edades = ["Gatito", "Adulto", "Mayor"];
 
+/**
+ * Construct and return an <option> HTML object with the value and index as params
+ * @param {string} value Option value
+ * @param {number} index Index value for "key" attribute
+ * @returns HTML object <option>
+ */
 function constructOption(value, index) {
   return (
     <option value={value} key={index}>
@@ -16,10 +22,21 @@ function constructOption(value, index) {
   );
 }
 
+/**
+ * Construct and return a personalized HTML object with the image, description and name of an animal object
+ * @param {object} item Animal object
+ * @param {number} index Index value for "key" attribute
+ * @returns Personalized HTML object with the image, description and name of item param
+ */
 function constructAnimalCard(item, index) {
   return (
-    <div className="my-card col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12" key={index}>
-      <div className="hover hover-2 text-white rounded"><img src="" alt=""/>
+    <div
+      className="my-card col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12"
+      key={index}
+      tabIndex={index}
+    >
+      <div className="hover hover-2 text-white rounded">
+        <img src="" alt="" />
         <div className="hover-overlay"></div>
         <div className="hover-2-content px-5 py-4">
           <h3 className="hover-2-title text-uppercase font-weight-bold mb-0">
@@ -28,13 +45,20 @@ function constructAnimalCard(item, index) {
           <p className="hover-2-description text-uppercase mb-0">
             {item.descripcion}
           </p>
-          <img className="cat-image" src={item.imagen} alt="Imagen del gatito" />
+          <img
+            className="cat-image"
+            src={item.imagen}
+            alt="Imagen del gatito"
+          />
         </div>
       </div>
     </div>
   );
 }
 
+/**
+ * Component class in charge of rendering the Adopt page
+ */
 class PagAdoptar extends Component {
   constructor(props) {
     super(props);
@@ -43,7 +67,7 @@ class PagAdoptar extends Component {
       color: "Color",
       sexo: "Sexo",
     };
-    
+
     this.noResults = true;
 
     this.handleChange = this.handleChange.bind(this);
@@ -61,18 +85,18 @@ class PagAdoptar extends Component {
     console.log(this.state);
     event.preventDefault();
   }
-  
+
   checkResults(noResults) {
     let noResultsMessage = (
       <div className="no-results">
         <p>No hay gatitos con esas caractrísticas (por ahora :))!</p>
       </div>
-    )
+    );
 
     if (noResults) {
-      return noResultsMessage; 
+      return noResultsMessage;
     }
-    return (<span className="d-none"></span>);
+    return <span className="d-none"></span>;
   }
 
   render() {
@@ -158,30 +182,52 @@ class PagAdoptar extends Component {
         </section>
         <section id="elige-mascota">
           <div className="container pb-3">
+            <div className="row">
+              <div className="col-12 text-center mb-3">
+                <p className="text-coffee fs-3">
+                  1. Elige tu mascota ideal
+                </p>
+              </div>
+            </div>
             <form onSubmit={this.handleSubmit}>
               <div className="row row-cols-auto flex-column flex-sm-row justify-content-center text-center">
                 <label className="col">
-                  <select value={this.state.edad} onChange={this.handleChange} name="edad" className="form-select ms-0">
-                    <option value='Edad'>Edad</option>
-                    {edades.map((item,index) => {
-                      return constructOption(item, index)
+                  <select
+                    value={this.state.edad}
+                    onChange={this.handleChange}
+                    name="edad"
+                    className="form-select ms-0"
+                  >
+                    <option value="Edad">Edad</option>
+                    {edades.map((item, index) => {
+                      return constructOption(item, index);
                     })}
                   </select>
                 </label>
 
                 <label className="col">
-                  <select value={this.state.color} onChange={this.handleChange} name="color" className="form-select ms-0">
-                    <option value='Color'>Color</option>
-                    {colores.map((item,index) => {
-                      return constructOption(item, index)
+                  <select
+                    value={this.state.color}
+                    onChange={this.handleChange}
+                    name="color"
+                    className="form-select ms-0"
+                  >
+                    <option value="Color">Color</option>
+                    {colores.map((item, index) => {
+                      return constructOption(item, index);
                     })}
                   </select>
                 </label>
                 <label className="col">
-                  <select value={this.state.sexo} onChange={this.handleChange} name="sexo" className="form-select ms-0">
-                    <option value='Sexo'>Sexo</option>
-                    {sexo.map((item,index) => {
-                      return constructOption(item, index)
+                  <select
+                    value={this.state.sexo}
+                    onChange={this.handleChange}
+                    name="sexo"
+                    className="form-select ms-0"
+                  >
+                    <option value="Sexo">Sexo</option>
+                    {sexo.map((item, index) => {
+                      return constructOption(item, index);
                     })}
                   </select>
                 </label>
@@ -193,25 +239,26 @@ class PagAdoptar extends Component {
             <div className="catalogo">
               <div className="catalogo-container">
                 <div className="container">
-
                   <div className="row">
+                    {AnimalItems.map((item, index) => {
+                      let isEdad =
+                        this.state.edad === item.edad ||
+                        this.state.edad === "Edad";
+                      let isColor =
+                        this.state.color === item.color ||
+                        this.state.color === "Color";
+                      let isSexo =
+                        this.state.sexo === item.sexo ||
+                        this.state.sexo === "Sexo";
 
-                      {AnimalItems.map((item,index) => {
-
-                        let isEdad = (this.state.edad === item.edad || this.state.edad === "Edad");
-                        let isColor = (this.state.color === item.color || this.state.color === "Color");
-                        let isSexo = (this.state.sexo === item.sexo || this.state.sexo === "Sexo");
-
-                        if (isColor && isEdad && isSexo) {
-                          this.noResults = false;
-                          return constructAnimalCard(item, index);
-                        }
-                        return <span className="d-none" key={index}></span>
-                      })}
-                      {this.checkResults(this.noResults)}
-
+                      if (isColor && isEdad && isSexo) {
+                        this.noResults = false;
+                        return constructAnimalCard(item, index);
+                      }
+                      return <span className="d-none" key={index}></span>;
+                    })}
+                    {this.checkResults(this.noResults)}
                   </div>
-
                 </div>
               </div>
             </div>
@@ -221,6 +268,5 @@ class PagAdoptar extends Component {
     );
   }
 }
-
 
 export default PagAdoptar;
