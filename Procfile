@@ -1,1 +1,1 @@
-web: deploy/ npm start
+dev: node index.js
