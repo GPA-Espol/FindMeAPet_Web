@@ -1,7 +1,5 @@
-// TODO: Refactoring para mejor mantenibilidad
-
 import React, { Component } from "react";
-import "./Adoptar.css";
+import "./PagAdoptar.css";
 import { AnimalItems } from "../../../fakeBackEnd/animalsCatalog.js";
 
 const colores = ["Gris", "Blanco", "Cafe", "Negro", "Naranja", "Crema"];

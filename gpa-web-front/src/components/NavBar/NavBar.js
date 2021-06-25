@@ -33,7 +33,6 @@ class NavBar extends Component {
             ></i>
           </div>
 
-          {/* TODO: Has dinámico el app.js relacionado */}
           <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
             {MenuItems.map((item, index) => {
               return (

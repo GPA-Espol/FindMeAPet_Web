@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Unete.css';
+import './PagUnete.css';
 
 
 class PagUnete extends Component{

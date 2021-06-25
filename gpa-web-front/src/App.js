@@ -4,8 +4,8 @@ import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import MainPage from "./components/Pages/MainPage/MainPage";
 import QuienesSomos from "./components/Pages/QuienesSomos/QuienesSomos";
-import Adoptar from "./components/Pages/Adoptar/Adoptar";
-import Unete from "./components/Pages/Unete/Unete";
+import PagAdoptar from "./components/Pages/Adoptar/PagAdoptar";
+import Unete from "./components/Pages/Unete/PagUnete";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={MainPage}></Route>
           <Route exact path="/quienessomos" component={QuienesSomos}></Route>
-          <Route exact path="/adoptar" component={Adoptar}></Route>
+          <Route exact path="/adoptar" component={PagAdoptar}></Route>
           <Route exact path="/unete" component={Unete}></Route>
         </Switch>
       </Router>
