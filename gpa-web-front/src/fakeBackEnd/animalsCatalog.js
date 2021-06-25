@@ -1,74 +1,122 @@
 export const AnimalItems = [
   {
-    "nombre": "Gatito 1",
-    "descripcion": "Descripción 1: Aquí podemos poner una corta descripción, aparte podemos poner campos como edad, sexo (tal vez no para que no los descarten de una), raza, etc.", 
-    "imagen": "Imagen",
-    "url": "/"
+    nombre: "Peluso",
+    descripcion:
+      "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
+    imagen: "/Catalog/Gato_3.jpg",
+    color: "Cafe",
+    sexo: "Macho",
+    edad: "Adulto",
+    url: "/",
   },
   {
-    "nombre": "Gatito 2",
-    "descripcion": "Descripción 2: Aquí podemos poner una corta descripción, aparte podemos poner campos como edad, sexo (tal vez no para que no los descarten de una), raza, etc.", 
-    "imagen": "Imagen",
-    "url": "/"
+    nombre: "Teito",
+    descripcion:
+      "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
+    imagen: "/Catalog/Gato_10.jpg",
+    color: "Naranja",
+    sexo: "Macho",
+    edad: "Adulto",
+    url: "/",
   },
   {
-    "nombre": "Gatito 3",
-    "descripcion": "Descripción 3: Aquí podemos poner una corta descripción, aparte podemos poner campos como edad, sexo (tal vez no para que no los descarten de una), raza, etc.", 
-    "imagen": "Imagen",
-    "url": "/"
+    nombre: "Mimi",
+    descripcion:
+      "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
+    imagen: "/Catalog/Gato_12.jpg",
+    color: "Cafe",
+    sexo: "Hembra",
+    edad: "Gatito",
+    url: "/",
   },
   {
-    "nombre": "Gatito 4",
-    "descripcion": "Descripción 4: Aquí podemos poner una corta descripción, aparte podemos poner campos como edad, sexo (tal vez no para que no los descarten de una), raza, etc.", 
-    "imagen": "Imagen",
-    "url": "/"
+    nombre: "Cenicienta",
+    descripcion:
+      "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
+    imagen: "/Catalog/Gato_15.jpg",
+    color: "Cafe",
+    sexo: "Hembra",
+    edad: "Adulto",
+    url: "/",
   },
   {
-    "nombre": "Gatito 5",
-    "descripcion": "Descripción 5: Aquí podemos poner una corta descripción, aparte podemos poner campos como edad, sexo (tal vez no para que no los descarten de una), raza, etc.", 
-    "imagen": "Imagen",
-    "url": "/"
+    nombre: "Empanada",
+    descripcion:
+      "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
+    imagen: "/Catalog/Gato_18.jpg",
+    color: "Blanco",
+    sexo: "Hembra",
+    edad: "Gatito",
+    url: "/",
   },
   {
-    "nombre": "Gatito 6",
-    "descripcion": "Descripción 6: Aquí podemos poner una corta descripción, aparte podemos poner campos como edad, sexo (tal vez no para que no los descarten de una), raza, etc.", 
-    "imagen": "Imagen",
-    "url": "/"
+    nombre: "Maluco",
+    descripcion:
+      "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
+    imagen: "/Catalog/Gato_21_1.jpg",
+    color: "Naranja",
+    sexo: "Macho",
+    edad: "Adulto",
+    url: "/",
   },
   {
-    "nombre": "Gatito 7",
-    "descripcion": "Descripción 7: Aquí podemos poner una corta descripción, aparte podemos poner campos como edad, sexo (tal vez no para que no los descarten de una), raza, etc.", 
-    "imagen": "Imagen",
-    "url": "/"
+    nombre: "Michu",
+    descripcion:
+      "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
+    imagen: "/Catalog/Gato_25.jpg",
+    color: "Blanco",
+    sexo: "Macho",
+    edad: "Mayor",
+    url: "/",
   },
   {
-    "nombre": "Gatito 8",
-    "descripcion": "Descripción 8: Aquí podemos poner una corta descripción, aparte podemos poner campos como edad, sexo (tal vez no para que no los descarten de una), raza, etc.", 
-    "imagen": "Imagen",
-    "url": "/"
+    nombre: "Mishi",
+    descripcion:
+      "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
+    imagen: "/Catalog/Gato_26.jpg",
+    color: "Cafe",
+    sexo: "Hembra",
+    edad: "Mayor",
+    url: "/",
   },
   {
-    "nombre": "Gatito 9",
-    "descripcion": "Descripción 9: Aquí podemos poner una corta descripción, aparte podemos poner campos como edad, sexo (tal vez no para que no los descarten de una), raza, etc.", 
-    "imagen": "Imagen",
-    "url": "/"
+    nombre: "Juno",
+    descripcion:
+      "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
+    imagen: "/Catalog/Gato_27.jpg",
+    color: "Negro",
+    sexo: "Macho",
+    edad: "Mayor",
+    url: "/",
   },
   {
-    "nombre": "Gatito 10",
-    "descripcion": "Descripción 10: Aquí podemos poner una corta descripción, aparte podemos poner campos como edad, sexo (tal vez no para que no los descarten de una), raza, etc.", 
-    "imagen": "Imagen",
-    "url": "/"
+    nombre: "Nemo",
+    descripcion:
+      "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
+    imagen: "/Catalog/Gato_28.jpg",
+    color: "Naranja",
+    sexo: "Macho",
+    edad: "Adulto",
+    url: "/",
   },
   {
-    "nombre": "Gatito 11",
-    "descripcion": "Descripción 11: Aquí podemos poner una corta descripción, aparte podemos poner campos como edad, sexo (tal vez no para que no los descarten de una), raza, etc.", 
-    "imagen": "Imagen",
-    "url": "/"
+    nombre: "Cookie",
+    descripcion:
+      "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
+    imagen: "/Catalog/Gato_32.jpg",
+    color: "Cafe",
+    sexo: "Hembra",
+    edad: "Adulto",
+    url: "/",
   },
   {
-    "nombre": "Gatito 12",
-    "descripcion": "Descripción 12: Aquí podemos poner una corta descripción, aparte podemos poner campos como edad, sexo (tal vez no para que no los descarten de una), raza, etc.", 
-    "imagen": "Imagen",
-    "url": "/"
+    nombre: "Ozzy",
+    descripcion:
+      "Aquí podemos poner una corta descripción, aparte podemos poner campos como sexo, raza, etc.",
+    imagen: "/Catalog/Gato_33.jpg",
+    color: "Gris",
+    sexo: "Macho",
+    edad: "Gatito",
+    url: "/",
   },
-]
+];
