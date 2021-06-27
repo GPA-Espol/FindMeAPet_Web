@@ -48,6 +48,10 @@
     ]
   },
   "devDependencies": {
-    "sonarqube-scanner": "^2.8.1"
+    "sonarqube-scanner": "^2.8.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "prettier": "^2.3.2",
+    "sonar-scanner": "^3.1.0"
   }
 }

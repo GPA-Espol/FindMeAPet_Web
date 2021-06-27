@@ -1,3 +1,5 @@
+// TODO: Refactoring para mejor mantenibilidad
+
 import React, { Component } from "react";
 import "./PagAdoptar.css";
 import { AnimalItems } from "../../../fakeBackEnd/animalsCatalog.js";
@@ -12,13 +14,11 @@ const edades = ["Gatito", "Adulto", "Mayor"];
  * @param {number} index Index value for "key" attribute
  * @returns HTML object <option>
  */
-function constructOption(value, index) {
-  return (
-    <option value={value} key={index}>
-      {value}
-    </option>
-  );
-}
+export const ConstructOption = ({ value, index }) => (
+  <option value={value} key={index}>
+    {value}
+  </option>
+);
 
 /**
  * Construct and return a personalized HTML object with the image, description and name of an animal object
@@ -26,33 +26,55 @@ function constructOption(value, index) {
  * @param {number} index Index value for "key" attribute
  * @returns Personalized HTML object with the image, description and name of item param
  */
-function constructAnimalCard(item, index) {
-  return (
-    <div
-      className="my-card col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12"
-      key={index}
-      tabIndex={index}
-    >
-      <div className="hover hover-2 text-white rounded">
-        <img src="" alt="" />
-        <div className="hover-overlay"></div>
-        <div className="hover-2-content px-5 py-4">
-          <h3 className="hover-2-title text-uppercase font-weight-bold mb-0">
-            <span className="font-weight-light">{item.nombre}</span>
-          </h3>
-          <p className="hover-2-description text-uppercase mb-0">
-            {item.descripcion}
-          </p>
-          <img
-            className="cat-image"
-            src={item.imagen}
-            alt="Imagen del gatito"
-          />
-        </div>
+export const ConstructAnimalCard = ({ item, index }) => (
+  <div
+    className="my-card col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12"
+    key={index}
+    tabIndex={index}
+  >
+    <div className="hover hover-2 text-white rounded">
+      <img src="" alt="" />
+      <div className="hover-overlay"></div>
+      <div className="hover-2-content px-5 py-4">
+        <h3 className="hover-2-title text-uppercase font-weight-bold mb-0">
+          <span className="font-weight-light">{item.nombre}</span>
+        </h3>
+        <p className="hover-2-description text-uppercase mb-0">
+          {item.descripcion}
+        </p>
+        <img className="cat-image" src={item.imagen} alt="Imagen del gatito" />
       </div>
     </div>
+  </div>
+);
+
+/**
+ * Returns a non-displayable card
+ * @param {number} index Index of array
+ */
+export const NoneCard = ({ index }) => (
+  <span className="d-none" key={index}>
+    No se muestra
+  </span>
+);
+
+/**
+ * Checks and returns a HTML object if there are no results from the filters
+ * @param {boolean} noResults Boolean indicator if any animal match the filters
+ * @returns Personalized HTML object if there are no results from the filters
+ */
+export const CheckResults = ({ noResults }) => {
+  let noResultsMessage = (
+    <div className="no-results">
+      <p>No hay gatitos con esas caractrísticas (por ahora :))!</p>
+    </div>
   );
-}
+
+  if (noResults) {
+    return noResultsMessage;
+  }
+  return <span className="d-none">No se muestra</span>;
+};
 
 /**
  * Component class in charge of rendering the Adopt page
@@ -60,16 +82,20 @@ function constructAnimalCard(item, index) {
 class PagAdoptar extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      edad: "Edad",
-      color: "Color",
-      sexo: "Sexo",
-    };
+    this.state =
+      props.state !== undefined
+        ? props.state
+        : {
+            edad: "Edad",
+            color: "Color",
+            sexo: "Sexo",
+          };
 
     this.noResults = true;
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    console.log(props.state);
   }
 
   handleChange(event) {
@@ -82,19 +108,6 @@ class PagAdoptar extends Component {
   handleSubmit(event) {
     console.log(this.state);
     event.preventDefault();
-  }
-
-  checkResults(noResults) {
-    let noResultsMessage = (
-      <div className="no-results">
-        <p>No hay gatitos con esas caractrísticas (por ahora :))!</p>
-      </div>
-    );
-
-    if (noResults) {
-      return noResultsMessage;
-    }
-    return <span className="d-none"></span>;
   }
 
   render() {
@@ -182,9 +195,7 @@ class PagAdoptar extends Component {
           <div className="container pb-3">
             <div className="row">
               <div className="col-12 text-center mb-3">
-                <p className="text-coffee fs-3">
-                  1. Elige tu mascota ideal
-                </p>
+                <p className="text-coffee fs-3">1. Elige tu mascota ideal</p>
               </div>
             </div>
             <form onSubmit={this.handleSubmit}>
@@ -196,9 +207,11 @@ class PagAdoptar extends Component {
                     name="edad"
                     className="form-select ms-0"
                   >
-                    <option value="Edad">Edad</option>
+                    <option value="Edad" key="0">
+                      Edad
+                    </option>
                     {edades.map((item, index) => {
-                      return constructOption(item, index);
+                      return <ConstructOption value={item} index={index} />;
                     })}
                   </select>
                 </label>
@@ -210,9 +223,11 @@ class PagAdoptar extends Component {
                     name="color"
                     className="form-select ms-0"
                   >
-                    <option value="Color">Color</option>
+                    <option value="Color" key="0">
+                      Color
+                    </option>
                     {colores.map((item, index) => {
-                      return constructOption(item, index);
+                      return <ConstructOption value={item} index={index} />;
                     })}
                   </select>
                 </label>
@@ -223,9 +238,11 @@ class PagAdoptar extends Component {
                     name="sexo"
                     className="form-select ms-0"
                   >
-                    <option value="Sexo">Sexo</option>
+                    <option value="Sexo" key="0">
+                      Sexo
+                    </option>
                     {sexo.map((item, index) => {
-                      return constructOption(item, index);
+                      return <ConstructOption value={item} index={index} />;
                     })}
                   </select>
                 </label>
@@ -251,11 +268,13 @@ class PagAdoptar extends Component {
 
                       if (isColor && isEdad && isSexo) {
                         this.noResults = false;
-                        return constructAnimalCard(item, index);
+                        return (
+                          <ConstructAnimalCard item={item} index={index} />
+                        );
                       }
-                      return <span className="d-none" key={index}></span>;
+                      return <NoneCard index={index} />;
                     })}
-                    {this.checkResults(this.noResults)}
+                    {<CheckResults noResults={this.noResults} />}
                   </div>
                 </div>
               </div>
