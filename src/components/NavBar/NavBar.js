@@ -46,17 +46,19 @@ class NavBar extends Component {
 
             <div className="donar-button">
               <div className="donar-button-container">
-                <Button
-                  variant="contained"
-                  color="primary"
-                  style={{
-                    color: "#F5f5f5",
-                    backgroundColor: "#ea7a1e",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Donar
-                </Button>
+                <NavLink exact to="/donar">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    style={{
+                      color: "#F5f5f5",
+                      backgroundColor: "#ea7a1e",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Donar
+                  </Button>
+                </NavLink>
               </div>
             </div>
           </ul>
