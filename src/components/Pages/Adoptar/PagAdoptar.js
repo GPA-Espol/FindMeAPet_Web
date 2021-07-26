@@ -3,7 +3,13 @@
 import React, { Component } from "react";
 import "./PagAdoptar.css";
 import { AnimalItems } from "../../../fakeBackEnd/animalsCatalog.js";
+import Button from "@material-ui/core/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeartbeat } from "@fortawesome/free-solid-svg-icons";
 
+/**
+ * Listas constantes (fake backend)
+ */
 const colores = ["Gris", "Blanco", "Cafe", "Negro", "Naranja", "Crema"];
 const sexo = ["Macho", "Hembra"];
 const edades = ["Gatito", "Adulto", "Mayor"];
@@ -277,6 +283,60 @@ class PagAdoptar extends Component {
                     {<CheckResults noResults={this.noResults} />}
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="llenar-formulario" className="p-section" style={{ backgroundImage: "url(/paw_wallpaper_bw.jpg)" }}>
+          <div className="container">
+            <div className="row mb-5">
+              <div className="col-12 text-center mb-3">
+                <p className="text-coffee fs-3">2. Llena el formulario</p>
+              </div>
+            </div>
+            <div className="row my-5">
+              <div className="col-12 col-md-8">
+                <p className="fs-5 text-coffee mb-0 py-2 text-end">
+                  Recuerda revisar tus datos e ingresar información{" "}
+                  <strong>verídica</strong>
+                </p>
+              </div>
+              <div className="col-12 col-md-4 d-flex justify-content-center">
+                <Button
+                  variant="contained"
+                  size="large"
+                  style={{
+                    color: "#F5f5f5",
+                    backgroundColor: "#ea7a1e",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Formulario
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="espera-confirmacion" className="p-section bg-white">
+          <div className="container">
+            <div className="row mb-5">
+              <div className="col-12 text-center mb-3">
+                <p className="text-coffee fs-3">3. Espera tu confirmación</p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-12 d-flex justify-content-center">
+                <FontAwesomeIcon
+                  icon={faHeartbeat}
+                  size="5x"
+                  color="white"
+                  className="icon-adoptar-page"
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-12 text-center my-3">
+                <p className="text-coffee fs-4">¡Muchas gracias por estar interesado en adoptar!</p>
               </div>
             </div>
           </div>

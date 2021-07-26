@@ -1,3 +1,8 @@
+.p-section {
+  padding-top: 4rem !important;
+  padding-bottom: 6rem !important;
+}
+
 #proceso-adopcion {
   background-color: #ec823a;
 }
@@ -152,4 +157,24 @@
 
 .hover-2:hover .hover-overlay {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+}
+
+/* Seccion Llenar Formulario */
+
+#llenar-formulario {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
+  background-color: #ffffff59;
+}
+
+/* Seccion Espera tu confirmacion */
+.icon-adoptar-page {
+  border: #EC823A solid;
+  border-radius: 50%;
+  padding: 15px;
+  background-color: #EC823A;
+  width: 1em !important;
 }
