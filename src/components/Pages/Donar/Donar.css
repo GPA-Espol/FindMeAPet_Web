@@ -1,0 +1,24 @@
+#imagen-balto {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 15%;
+    background-color: rgba(0,0,0,0.4);
+    background-blend-mode: darken;
+}
+
+.icon-donar-page-1 {
+    border: #EC823A solid;
+    border-radius: 5%;
+    padding: 20px;
+    background-color: #EC823A;
+    width: 1em !important;
+}
+
+#como-donar {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
+    background-color: #ffffff59;
+}

@@ -49,7 +49,6 @@ class NavBar extends Component {
                 <NavLink exact to="/donar">
                   <Button
                     variant="contained"
-                    color="primary"
                     style={{
                       color: "#F5f5f5",
                       backgroundColor: "#ea7a1e",
