@@ -82,7 +82,6 @@
 }
 
 
-
 .hover {
   overflow: hidden;
   position: relative;
@@ -133,6 +132,7 @@
   width: 100%;
   z-index: 99;
   transition: all 0.3s;
+  opacity: 0;
 }
 
 .hover-2-description {
@@ -148,6 +148,7 @@
 
 .hover-2:hover .hover-2-title {
   transform: translateY(-1.5rem);
+  opacity: 1;
 }
 
 .hover-2:hover .hover-2-description {
