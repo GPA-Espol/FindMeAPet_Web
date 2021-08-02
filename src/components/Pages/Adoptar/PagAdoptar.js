@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import "./PagAdoptar.css";
-import { AnimalItems } from "../../../fakeBackEnd/animalsCatalog.js";
+// import { AnimalItems } from "../../../fakeBackEnd/animalsCatalog.js";
 import Button from "@material-ui/core/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeartbeat } from "@fortawesome/free-solid-svg-icons";
@@ -10,13 +10,10 @@ import { faHeartbeat } from "@fortawesome/free-solid-svg-icons";
 /**
  * Listas constantes (fake backend)
  */
-const colores = ["Gris", "Blanco", "Cafe", "Negro", "Naranja", "Crema"];
+let colores = [];
+const tipos = ["Gato", "Perro"];
 const sexo = ["Macho", "Hembra"];
 const edades = ["Gatito", "Adulto", "Mayor"];
-
-
-
-
 
 /**
  * Construct and return an <option> HTML object with the value and index as params
@@ -102,6 +99,7 @@ class PagAdoptar extends Component {
             edad: "Edad",
             color: "Color",
             sexo: "Sexo",
+            tipo: "Tipo",
             animales: []
           };
 
@@ -125,42 +123,33 @@ class PagAdoptar extends Component {
     event.preventDefault();
   }
 
+  capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
 
   componentDidMount() {
     const apiUrl = 'https://findmepet.herokuapp.com/mascota';
     fetch(apiUrl)
       .then((response) => response.json())
-      .then((data) => this.setState({animales: data}));
+      .then((data) => {
+        this.setState({animales: data})
+        console.log(this.state.animales);
+        
+      })
+      .then(x => {
+        for (let obj of this.state.animales) {
+          let colorCapitalize = this.capitalizeFirstLetter(obj.color);
+          if (!colores.includes(colorCapitalize))
+            colores.push(colorCapitalize);
+        }
+        this.setState({});
+      });
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   render() {
 
     return (
       <React.Fragment>
-
-
-
-
-
-
-
-
-
         <section id="proceso-adopcion">
           <div className="container pt-5 pb-3">
             <div className="row">
@@ -294,6 +283,21 @@ class PagAdoptar extends Component {
                     })}
                   </select>
                 </label>
+                <label className="col">
+                  <select
+                    value={this.state.tipo}
+                    onChange={this.handleChange}
+                    name="tipo"
+                    className="form-select ms-0"
+                  >
+                    <option value="Tipo" key="0">
+                      Tipo
+                    </option>
+                    {tipos.map((item, index) => {
+                      return <ConstructOption value={item} index={index} />;
+                    })}
+                  </select>
+                </label>
               </div>
             </form>
           </div>
@@ -308,13 +312,16 @@ class PagAdoptar extends Component {
                         this.state.edad === item.edad ||
                         this.state.edad === "Edad";
                       let isColor =
-                        this.state.color === item.color ||
+                        this.state.color.toLowerCase() === item.color ||
                         this.state.color === "Color";
                       let isSexo =
-                        this.state.sexo === item.sexo ||
+                        this.state.sexo === (item.sexo === "M" ? "Macho" : "Hembra") ||
                         this.state.sexo === "Sexo";
+                      let isTipo =
+                        this.state.tipo === item.tipo_mascota ||
+                        this.state.tipo === "Tipo";
 
-                      if (isColor && isEdad && isSexo) {
+                      if (isColor && isEdad && isSexo && isTipo) {
                         this.noResults = false;
                         return (
                           <ConstructAnimalCard item={item} index={index} />
