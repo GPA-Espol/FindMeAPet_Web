@@ -14,6 +14,10 @@ const colores = ["Gris", "Blanco", "Cafe", "Negro", "Naranja", "Crema"];
 const sexo = ["Macho", "Hembra"];
 const edades = ["Gatito", "Adulto", "Mayor"];
 
+
+
+
+
 /**
  * Construct and return an <option> HTML object with the value and index as params
  * @param {string} value Option value
@@ -48,7 +52,7 @@ export const ConstructAnimalCard = ({ item, index }) => (
         <p className="hover-2-description text-uppercase mb-0">
           {item.descripcion}
         </p>
-        <img className="cat-image" src={item.imagen} alt="Imagen del gatito" />
+        <img className="cat-image" src={item.imagen_url} alt="Imagen del gatito" />
       </div>
     </div>
   </div>
@@ -82,10 +86,13 @@ export const CheckResults = ({ noResults }) => {
   return <span className="d-none">No se muestra</span>;
 };
 
+
+
 /**
  * Component class in charge of rendering the Adopt page
  */
 class PagAdoptar extends Component {
+
   constructor(props) {
     super(props);
     this.state =
@@ -95,13 +102,15 @@ class PagAdoptar extends Component {
             edad: "Edad",
             color: "Color",
             sexo: "Sexo",
+            animales: []
           };
 
     this.noResults = true;
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    console.log(props.state);
+
+    //console.log(props.state);
   }
 
   handleChange(event) {
@@ -116,9 +125,42 @@ class PagAdoptar extends Component {
     event.preventDefault();
   }
 
+
+  componentDidMount() {
+    const apiUrl = 'https://findmepet.herokuapp.com/mascota';
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => this.setState({animales: data}));
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   render() {
+
     return (
       <React.Fragment>
+
+
+
+
+
+
+
+
+
         <section id="proceso-adopcion">
           <div className="container pt-5 pb-3">
             <div className="row">
@@ -261,7 +303,7 @@ class PagAdoptar extends Component {
               <div className="catalogo-container">
                 <div className="container">
                   <div className="row">
-                    {AnimalItems.map((item, index) => {
+                    {this.state.animales.map((item, index) => {
                       let isEdad =
                         this.state.edad === item.edad ||
                         this.state.edad === "Edad";
