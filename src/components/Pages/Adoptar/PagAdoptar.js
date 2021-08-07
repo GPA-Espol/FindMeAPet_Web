@@ -6,6 +6,7 @@ import "./PagAdoptar.css";
 import Button from "@material-ui/core/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeartbeat } from "@fortawesome/free-solid-svg-icons";
+import AnimalModal from "./AnimalModal/AnimalModal";
 
 /**
  * Listas constantes (fake backend)
@@ -35,9 +36,8 @@ export const ConstructOption = ({ value, index }) => (
  */
 export const ConstructAnimalCard = ({ item, index }) => (
   <div
-    className="my-card col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12"
-    key={index}
-    tabIndex={index}
+  key={index}
+  tabIndex={index}
   >
     <div className="hover hover-2 text-white rounded">
       <img src="" alt="" />
@@ -53,6 +53,7 @@ export const ConstructAnimalCard = ({ item, index }) => (
       </div>
     </div>
   </div>
+  
 );
 
 /**
@@ -100,7 +101,8 @@ class PagAdoptar extends Component {
             color: "Color",
             sexo: "Sexo",
             tipo: "Tipo",
-            animales: []
+            animales: [],
+            animalSelected: undefined,
           };
 
     this.noResults = true;
@@ -123,6 +125,10 @@ class PagAdoptar extends Component {
     event.preventDefault();
   }
 
+  selectAnimal(animal) {
+    this.setState({animalSelected: animal})
+  }
+
   capitalizeFirstLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
@@ -133,7 +139,6 @@ class PagAdoptar extends Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({animales: data})
-        console.log(this.state.animales);
         
       })
       .then(x => {
@@ -324,7 +329,10 @@ class PagAdoptar extends Component {
                       if (isColor && isEdad && isSexo && isTipo) {
                         this.noResults = false;
                         return (
-                          <ConstructAnimalCard item={item} index={index} />
+                          <div className="my-card col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12"
+                          onClick={() => this.selectAnimal(item)}>
+                            <ConstructAnimalCard item={item} index={index} />
+                          </div>
                         );
                       }
                       return <NoneCard index={index} />;
@@ -335,6 +343,7 @@ class PagAdoptar extends Component {
               </div>
             </div>
           </div>
+          <AnimalModal data={this.state.animalSelected}/>
         </section>
         <section id="llenar-formulario" className="p-section" style={{ backgroundImage: "url(/paw_wallpaper_bw.jpg)" }}>
           <div className="container">

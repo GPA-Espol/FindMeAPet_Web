@@ -66,7 +66,7 @@
 /* Este es mío */
 .my-card {
   /* margin: 5px; */
-  height: 300px;
+  height: 250px;
   /* padding: 0%;
   border-width: 10px;
   border-color: blue;
@@ -74,6 +74,18 @@
   /* Para que haya un piti de espacio entre las cartas verticalemente*/
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 575px) and (min-width: 500px) {
+  .my-card {
+    margin-bottom: 8rem !important;
+  }
+}
+
+@media (max-width: 499px) and (min-width: 410px) {
+  .my-card {
+    margin-bottom: 4rem !important;
+  }
 }
 
 .my-card:focus {
