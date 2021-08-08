@@ -1,0 +1,67 @@
+
+.animal-modal-container{
+  display: flex;
+  justify-content: center;
+}
+
+.animal-modal{
+  height: 400px;
+  width: 70%;
+  position: center;
+  display: flex; 
+  justify-content: center;
+  box-shadow: -1px 0px 8px 7px rgba(0,0,0,0.26);
+  -webkit-box-shadow: -1px 0px 8px 7px rgba(0,0,0,0.26);
+  -moz-box-shadow: -1px 0px 8px 7px rgba(0,0,0,0.26);
+}
+
+.modal-image{
+  /* height: 100%; */
+  width: 50%;
+  padding: 2px;
+}
+
+.modal-info{
+  /* height: 100%; */
+  width: 50%;
+  padding: 10px;
+}
+
+
+.pet-image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.modal-field{
+  font-weight: bold;
+  margin-bottom: 5px;
+  border-bottom: 2px solid rgba(0,0,0,0.10);
+}
+
+
+.modal-field.description{
+  border-bottom: 0;
+}
+
+
+.field-value {
+  margin-bottom: 20px;
+}
+
+
+
+.description-box {
+  border: 2px solid rgba(0,0,0,0.10);
+  border-radius: 5px;
+  height: 35%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.description-text {
+  padding: 2px;
+  padding-left: 10px;
+}
