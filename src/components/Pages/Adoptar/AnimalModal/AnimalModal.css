@@ -5,7 +5,7 @@
 }
 
 .animal-modal{
-  height: 400px;
+  height: 600px;
   width: 70%;
   position: center;
   display: flex; 
@@ -36,6 +36,7 @@
 
 .modal-field{
   font-weight: bold;
+  font-size: 20px;
   margin-bottom: 5px;
   border-bottom: 2px solid rgba(0,0,0,0.10);
 }
@@ -48,17 +49,28 @@
 
 .field-value {
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
-
+.modal-pair {
+  height: 13%;
+} 
 
 .description-box {
   border: 2px solid rgba(0,0,0,0.10);
   border-radius: 5px;
-  height: 35%;
+  height: 30%;
   margin: 0;
   padding: 0;
 }
+
+.adoptar-button-container {
+  display: flex;
+  height: 13%;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 .description-text {
