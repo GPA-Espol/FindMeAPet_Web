@@ -23,6 +23,7 @@ const ShowAnimal = (props) => {
       esterilizado = "No está esterilizado"
     }
 
+    // TODO: Descomenta esto cuando este resuelto lo de los campos null
     // let color = selectedPet.color.charAt(0).toUpperCase() + selectedPet.color.slice(1);
     let color = selectedPet.color;
     
