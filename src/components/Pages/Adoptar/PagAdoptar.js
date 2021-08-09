@@ -88,10 +88,12 @@ export const CheckResults = ({ noResults }) => {
 
 
 
+
 /**
  * Component class in charge of rendering the Adopt page
  */
 class PagAdoptar extends Component {
+
 
   constructor(props) {
     super(props);
@@ -131,6 +133,8 @@ class PagAdoptar extends Component {
     this.setState({animalSelected: animal});
     FormData["animal"] = animal;
   }
+
+
 
   capitalizeFirstLetter(str) {
     if(str === null)  return "null";
@@ -346,7 +350,10 @@ class PagAdoptar extends Component {
               </div>
             </div>
           </div>
-          <AnimalModal data={this.state.animalSelected}/>
+
+          {/* Este es el modal */}
+          <AnimalModal data={this.state.animalSelected} stateMethod={() => this.selectAnimal(undefined)}/>
+
         </section>
         <section id="llenar-formulario" className="p-section" style={{ backgroundImage: "url(/paw_wallpaper_bw.jpg)" }}>
           <div className="container">
@@ -409,3 +416,11 @@ class PagAdoptar extends Component {
 }
 
 export default PagAdoptar;
+
+
+
+
+
+            {/* <button onClick={() => this.selectAnimal(undefined)} label="asfasdf"/> */}
+
+

@@ -7,7 +7,6 @@ import QuienesSomos from "./components/Pages/QuienesSomos/QuienesSomos";
 import PagAdoptar from "./components/Pages/Adoptar/PagAdoptar";
 import Unete from "./components/Pages/Unete/PagUnete";
 import Donar from "./components/Pages/Donar/Donar";
-import AnimalModal from "./components/Pages/Adoptar/AnimalModal/AnimalModal";
 import Formulario from "./components/Pages/Formulario/Formulario";
 
 function App() {
