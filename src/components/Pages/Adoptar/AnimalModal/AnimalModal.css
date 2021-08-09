@@ -6,7 +6,7 @@
 
   /* Para que flote B) */
   position: fixed;
-  z-index: 99;  
+  z-index: 90;  
   left: 0;
   right: 0;
   top: 0;
@@ -21,6 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 91;  
 }
 
 
@@ -37,12 +38,14 @@
   box-shadow: -1px 0px 8px 7px rgba(0,0,0,0.26);
   -webkit-box-shadow: -1px 0px 8px 7px rgba(0,0,0,0.26);
   -moz-box-shadow: -1px 0px 8px 7px rgba(0,0,0,0.26);
+  z-index: 92;  
 }
 
 .modal-image{
   /* height: 100%; */
   width: 50%;
   padding: 0;
+  z-index: 99;
 }
 
 .modal-info{
