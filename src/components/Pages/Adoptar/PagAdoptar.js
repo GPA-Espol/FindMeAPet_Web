@@ -151,7 +151,6 @@ class PagAdoptar extends Component {
           if (!colores.includes(colorCapitalize))
             colores.push(colorCapitalize);
         }
-        this.setState({});
       });
   }
 
