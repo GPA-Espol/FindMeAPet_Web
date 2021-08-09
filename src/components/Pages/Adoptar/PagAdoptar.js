@@ -7,6 +7,8 @@ import Button from "@material-ui/core/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeartbeat } from "@fortawesome/free-solid-svg-icons";
 import AnimalModal from "./AnimalModal/AnimalModal";
+import { FormData } from "../Formulario/Formulario";
+import { NavLink } from "react-router-dom"; 
 
 /**
  * Listas constantes (fake backend)
@@ -126,10 +128,12 @@ class PagAdoptar extends Component {
   }
 
   selectAnimal(animal) {
-    this.setState({animalSelected: animal})
+    this.setState({animalSelected: animal});
+    FormData["animal"] = animal;
   }
 
   capitalizeFirstLetter(str) {
+    if(str === null)  return "null";
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
@@ -360,17 +364,18 @@ class PagAdoptar extends Component {
                 </p>
               </div>
               <div className="col-12 col-md-4 d-flex justify-content-center">
-                <Button
-                  variant="contained"
-                  size="large"
-                  style={{
-                    color: "#F5f5f5",
-                    backgroundColor: "#ea7a1e",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Formulario
-                </Button>
+                
+                  <Button
+                    variant="contained"
+                    size="large"
+                    style={{
+                      color: "#F5f5f5",
+                      backgroundColor: "#ea7a1e",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Formulario
+                  </Button>
               </div>
             </div>
           </div>
