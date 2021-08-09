@@ -1,13 +1,37 @@
 
 .animal-modal-container{
+  width: 100%;
+  height: 100%;
+
+
+  /* Para que flote B) */
+  position: fixed;
+  z-index: 99;  
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+.animal-modal-background {
+  background-color: rgba(0,0,0,0.8);
+  height: 100%;
+  width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
+
+
+
 .animal-modal{
-  height: 600px;
-  width: 70%;
-  position: center;
+  height: 700px;
+  width: 68%;
+  /* width: 100%; */
+  /* width: 70%; */
+  /* position: center; */
   display: flex; 
   justify-content: center;
   box-shadow: -1px 0px 8px 7px rgba(0,0,0,0.26);
@@ -18,13 +42,14 @@
 .modal-image{
   /* height: 100%; */
   width: 50%;
-  padding: 2px;
+  padding: 0;
 }
 
 .modal-info{
   /* height: 100%; */
   width: 50%;
-  padding: 10px;
+  /* padding: 10px; */
+  background-color: #F5f5f5;
 }
 
 
@@ -52,14 +77,50 @@
   font-size: 18px;
 }
 
+.field-value.name {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff; 
+  margin: 0;
+  padding: 0;
+}
+
 .modal-pair {
   height: 13%;
+  padding: 10px;
+} 
+
+
+.modal-pair.name {
+  display: flex;
+  /* padding-right: 10px; */
+  /* background-color: #ea7a1e; */
+
+  background: rgb(234,122,30);
+  background: linear-gradient(96deg, rgba(234,122,30,1) 14%, rgba(227,93,38,1) 43%);
+
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+
+} 
+
+.fas.fa-times {
+  /* position: right; */
+  color: #f5f5f5;
+}
+
+.modal-pair.description {
+  height: 35%;
+  padding-bottom: 0;
+  border-bottom: 0;
 } 
 
 .description-box {
   border: 2px solid rgba(0,0,0,0.10);
   border-radius: 5px;
-  height: 30%;
+  height: 82%;
   margin: 0;
   padding: 0;
 }
@@ -74,6 +135,6 @@
 
 
 .description-text {
-  padding: 2px;
+  padding: 10px;
   padding-left: 10px;
 }

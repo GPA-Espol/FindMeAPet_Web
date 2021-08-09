@@ -22,67 +22,82 @@ const ShowAnimal = (props) => {
     } else {
       esterilizado = "No está esterilizado"
     }
+
+    let color = selectedPet.color.charAt(0).toUpperCase() + selectedPet.color.slice(1);
     
     
 
     return (
 
-      <div class="animal-modal-container">
-
-        <div className="animal-modal">
-
-          <div className="modal-image">
-            <img className="pet-image" src={selectedPet.imagen_url} alt="imagen mascota" />
-          </div>
+      <div className="animal-modal-container">
 
 
-          <div className="modal-info">
+        <div className="animal-modal-background" onClick={() => disableModal()}>
 
-            <div className="modal-pair name">
-              <p className="modal-field name">Nombre: </p>
-              <p className="field-value name">{selectedPet.nombre}</p>
+          <div className="animal-modal">
+
+            <div className="modal-image">
+              <img className="pet-image" src={selectedPet.imagen_url} alt="imagen mascota" />
             </div>
 
 
-            <div className="modal-pair birthdate">
-              <p className="modal-field birthdate">Fecha de nacimiento:</p>
-              <p className="field-value birthdate">{selectedPet.fecha_nacimiento}</p>
+            <div className="modal-info">
+
+              <div className="modal-pair name">
+                {/* <p className="modal-field name">Nombre: </p> */}
+                <div></div>
+                <p className="field-value name">{selectedPet.nombre}</p>
+                <i className="fas fa-times fa-2x" onClick={() => disableModal()}/>
+
+              </div>
+
+
+              <div className="modal-pair birthdate">
+                <p className="modal-field birthdate">Fecha de nacimiento:</p>
+                <p className="field-value birthdate">{selectedPet.fecha_nacimiento}</p>
+              </div>
+
+
+              <div className="modal-pair color">
+                <p className="modal-field color">Color: </p>
+                <p className="field-value color">{color}</p>
+              </div>
+
+
+              <div className="modal-pair esterilizado">
+                <p className="modal-field esterilizado">Esterilización: </p>
+                <p className="field-value esterilizado">{esterilizado}</p>
+              </div>
+
+              <div className="modal-pair description">
+                <p className="modal-field description">Descripción: </p>
+                <div className="description-box">
+                  <p className="description-text">
+                    {selectedPet.descripcion}
+                  </p>
+
+                </div>
+              </div>
+
+
+              <div className="adoptar-button-container">
+                <Button variant="contained" style={{color: "#F5f5f5", 
+                    background: 'rgb(227,93,38)',
+                    fontWeight: "bold", height: "50%"}}>
+                  ¡Adóptalo ya!
+                </Button>
+              </div>
+
+              {/* <button className="button-adoptar" onClick={() => disableModal()}></button> */}
+
+
+
+
             </div>
 
 
-            <div className="modal-pair color">
-              <p className="modal-field color">Color: </p>
-              <p className="field-value color">{selectedPet.color}</p>
-            </div>
+        </div>
 
-
-            <div className="modal-pair esterilizado">
-              <p className="modal-field esterilizado">Esterilización: </p>
-              <p className="field-value esterilizado">{esterilizado}</p>
-            </div>
-
-
-            <p className="modal-field description">Descripción: </p>
-            <div className="description-box">
-              <p className="description-text">
-                {selectedPet.descripcion}
-              </p>
-
-            </div>
-
-
-            <div className="adoptar-button-container">
-              <Button variant="contained" style={{color: "#F5f5f5", backgroundColor: "#ea7a1e", fontWeight: "bold", height: "50%"}}>
-                ¡Adóptalo ya!
-              </Button>
-            </div>
-
-            {/* <button className="button-adoptar" onClick={() => disableModal()}></button> */}
-
-
-
-
-          </div>
         </div>
       </div>
     )
