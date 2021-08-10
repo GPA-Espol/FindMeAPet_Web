@@ -1,6 +1,7 @@
 import React from 'react';
 import './AnimalModal.css';
 import Button from "@material-ui/core/Button";
+import { Link } from 'react-router-dom';
 
 const ShowAnimal = (props) => {
   // let funcion = funcion.funcion; 
@@ -82,11 +83,14 @@ const ShowAnimal = (props) => {
 
 
               <div className="adoptar-button-container">
-                <Button variant="contained" style={{color: "#F5f5f5", 
-                    background: 'rgb(227,93,38)',
-                    fontWeight: "bold", height: "50%"}}>
-                  ¡Adóptalo ya!
-                </Button>
+                <Link exact to="/formulario">
+                  <Button variant="contained" style={{color: "#F5f5f5", 
+                      background: 'rgb(227,93,38)',
+                      fontWeight: "bold", height: "50%"}}>
+                    ¡Adóptalo ya!
+                  </Button>
+                </Link>
+                
               </div>
 
               {/* <button className="button-adoptar" onClick={() => disableModal()}></button> */}

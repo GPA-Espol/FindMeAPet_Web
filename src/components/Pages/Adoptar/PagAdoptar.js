@@ -129,9 +129,10 @@ class PagAdoptar extends Component {
     event.preventDefault();
   }
 
-  selectAnimal(animal) {
+  selectAnimal(animal, isModal) {
     this.setState({animalSelected: animal});
-    FormData["animal"] = animal;
+    if (!isModal)
+      FormData["animal"] = animal;
   }
 
 
@@ -337,7 +338,7 @@ class PagAdoptar extends Component {
                         this.noResults = false;
                         return (
                           <div className="my-card col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12"
-                          onClick={() => this.selectAnimal(item)}>
+                          onClick={() => this.selectAnimal(item, false)}>
                             <ConstructAnimalCard item={item} index={index} />
                           </div>
                         );
@@ -352,7 +353,7 @@ class PagAdoptar extends Component {
           </div>
 
           {/* Este es el modal */}
-          <AnimalModal data={this.state.animalSelected} stateMethod={() => this.selectAnimal(undefined)}/>
+          <AnimalModal data={this.state.animalSelected} stateMethod={() => this.selectAnimal(undefined, true)}/>
 
         </section>
         <section id="llenar-formulario" className="p-section" style={{ backgroundImage: "url(/paw_wallpaper_bw.jpg)" }}>
