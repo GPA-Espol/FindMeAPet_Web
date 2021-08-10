@@ -4,7 +4,7 @@ export const MenuItems = [
     "url": "/"
   },
   {
-    "nombre": "Quienes Somos",
+    "nombre": "Quiénes Somos",
     "url": "/quienessomos"
   },
   {

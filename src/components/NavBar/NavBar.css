@@ -16,6 +16,10 @@
   /* background: linear-gradient(90deg, #F9C49A 0%, #ea7a1e 100%); */
 }
 
+.logo-container {
+  max-height: 95px;
+}
+
 /* TODO: Toda el logo ocupa mucho, arreglar para que el cursor pointer quede bien */
 .nav-logo {
   /* flex-grow: 1; */
@@ -25,9 +29,10 @@
 }
 
 .nav-logo img {
-  width: 200px;
-  height: auto;
-  margin-top: 0.5rem !important;
+  /* Estos son importante son el logo que me gustaba a mi */ 
+  /* width: 200px; */
+  /* height: auto; */
+  /* margin-top: 0.5rem !important; */
   cursor: pointer;
 }
 
@@ -35,6 +40,14 @@ a.active, a {
   text-decoration: none !important;
 }
 
+
+/* Esto es necesario para el logo que quiere mónica */
+.logo-img {
+  /* object-fit: cover; */
+  height: 100px;
+  width: 100px;
+  margin: 0!important;
+}
 
 .nav-menu {
   display: grid;
