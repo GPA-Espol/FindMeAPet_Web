@@ -80,8 +80,8 @@ const MainPage = () => {
                       Dona
                     </h5>
                     <p className="card-text fs-5 text-coffee">
-                      Ayúdanos a mantener a la fauna urbana del Campus.
-                      Cualquier granito de arena nos será util
+                      Ayúdanos a mantener a la fauna urbana del campus.
+                      Cualquier granito de arena hace la diferencia
                     </p>
                   </div>
                 </div>
@@ -101,7 +101,7 @@ const MainPage = () => {
                       Únete
                     </h5>
                     <p className="card-text fs-5 text-coffee">
-                      Ven junto a nosotros y cuidemos juntos a nuestros
+                      Únete a nuestra organización y cuidemos juntos a nuestros
                       animalitos del campus
                     </p>
                   </div>
