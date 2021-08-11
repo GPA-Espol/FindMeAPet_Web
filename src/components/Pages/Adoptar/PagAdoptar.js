@@ -52,7 +52,7 @@ export const ConstructAnimalCard = ({ item, index }) => (
         <p className="hover-2-description text-uppercase mb-0">
           {item.descripcion}
         </p>
-        <img className="cat-image" src={item.imagen_url} alt="Imagen del gatito" />
+        <img className="cat-image" src={item.imagen_url} alt="Imagen del animalito" />
       </div>
     </div>
   </div>

@@ -54,11 +54,11 @@ class Footer extends Component {
               <p>CONTACTO</p>
               <p>
                 <FontAwesomeIcon icon={faLocationArrow} color="#7C3C21" />
-                {spaces6}Dirección
+                {spaces6}Dirección: xxxxxx
               </p>
               <p>
                 <FontAwesomeIcon icon={faPhone} transform={{ rotate: 90 }} color="#7C3C21" />
-                {spaces6}Teléfono: 
+                {spaces6}Teléfono: xxxxxx 
               </p>
               <p>
                 <FontAwesomeIcon icon={faMailBulk} color="#7C3C21" />
@@ -67,7 +67,7 @@ class Footer extends Component {
               </p>
               <p>
                 <FontAwesomeIcon icon={faClock} color="#7C3C21" />
-                {spaces6}Horario
+                {spaces6}Horario: xxxxxx
               </p>
             </div>
           </div>
