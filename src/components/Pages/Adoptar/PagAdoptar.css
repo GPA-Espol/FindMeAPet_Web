@@ -140,7 +140,7 @@
 
 .hover-2-title {
   position: absolute;
-  top: 50%;
+  top: 15%;
   left: 0;
   text-align: center;
   width: 100%;
@@ -149,16 +149,42 @@
   opacity: 0;
 }
 
+/* OG hover title */
+/* .hover-2-title { */
+/*   position: absolute; */
+/*   top: 50%; */
+/*   left: 0; */
+/*   text-align: center; */
+/*   width: 100%; */
+/*   z-index: 20; */
+/*   transition: all 0.3s; */
+/*   opacity: 0; */
+/* } */
+
+
 .hover-2-description {
   width: 100%;
   position: absolute;
   bottom: 0;
   opacity: 0;
   left: 0;
-  text-align: center;
+  text-align: justify;
   z-index: 20;
   transition: all 0.3s;
+  padding: 10px;
 }
+
+/* OG hover description */
+/* .hover-2-description { */
+/*   width: 100%; */
+/*   position: absolute; */
+/*   bottom: 0; */
+/*   opacity: 0; */
+/*   left: 0; */
+/*   text-align: center; */
+/*   z-index: 20; */
+/*   transition: all 0.3s; */
+/* } */
 
 .hover-2:hover .hover-2-title {
   transform: translateY(-1.5rem);

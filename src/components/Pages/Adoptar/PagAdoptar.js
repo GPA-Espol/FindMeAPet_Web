@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeartbeat } from "@fortawesome/free-solid-svg-icons";
 import AnimalModal from "./AnimalModal/AnimalModal";
 import { FormData } from "../Formulario/Formulario";
-import { NavLink } from "react-router-dom"; 
 
 /**
  * Listas constantes (fake backend)
@@ -16,8 +15,8 @@ import { NavLink } from "react-router-dom";
 let colores = [];
 const tipos = ["Gato", "Perro"];
 const sexo = ["Macho", "Hembra"];
-const edades = ["Gatito", "Adulto", "Mayor"];
-// const edades = ["Cachorro", "Juvenil", "Adulto"];
+// const edades = ["Gatito", "Adulto", "Mayor"];
+const edades = ["Cachorro", "Juvenil", "Adulto"];
 
 /**
  * Construct and return an <option> HTML object with the value and index as params
@@ -37,27 +36,44 @@ export const ConstructOption = ({ value, index }) => (
  * @param {number} index Index value for "key" attribute
  * @returns Personalized HTML object with the image, description and name of item param
  */
-export const ConstructAnimalCard = ({ item, index }) => (
-  <div
-  key={index}
-  tabIndex={index}
-  >
-    <div className="hover hover-2 text-white rounded">
-      <img src="" alt="" />
-      <div className="hover-overlay"></div>
-      <div className="hover-2-content px-5 py-4">
-        <h3 className="hover-2-title text-uppercase font-weight-bold mb-0">
-          <span className="font-weight-light">{item.nombre}</span>
-        </h3>
-        <p className="hover-2-description text-uppercase mb-0">
-          {item.descripcion}
-        </p>
-        <img className="cat-image" src={item.imagen_url} alt="Imagen del animalito" />
+export const ConstructAnimalCard = ({ item, index }) => {
+
+  // TODO: Necesito sacar la edad y el sexo del animalito versión usuario
+  
+
+  let categoriaEdad = item.categoria_edad.charAt(0).toUpperCase() + item.categoria_edad.slice(1);
+  let sexo = (item.sexo === 'M' ? 'Macho' : 'Hembra');
+  console.log(typeof item.categoria_edad)
+
+
+  return(
+    <div
+    key={index}
+    tabIndex={index}
+    >
+      <div className="hover hover-2 text-white rounded">
+        <img src="" alt="" />
+        <div className="hover-overlay"></div>
+        <div className="hover-2-content px-5 py-4">
+          <h3 className="hover-2-title text-uppercase font-weight-bold mb-0">
+            <span className="font-weight-light">{item.nombre}</span>
+          </h3>
+          {/* OG className */}
+          {/* <p className="hover-2-description text-uppercase mb-0"> */}
+          <p className="hover-2-description mb-0">
+            EDAD: {categoriaEdad} <br/> 
+            SEXO: {sexo} <br/><br/>
+            DESCRIPCIÓN: <br/>
+            {item.descripcion}. Conoce al nuevo miembro de tu familia.
+          </p>
+          <img className="cat-image" src={item.imagen_url} alt="Imagen del animalito" />
+        </div>
       </div>
     </div>
-  </div>
-  
-);
+
+  )
+};
+
 
 /**
  * Returns a non-displayable card
@@ -257,11 +273,12 @@ class PagAdoptar extends Component {
                     name="edad"
                     className="form-select ms-0"
                   >
-                    <option value="Edad" key="0">
+                    <option value="Edad">
                       Edad
                     </option>
+                    {/* TODO: Hay un warning dice que necesita key (pero ya tiene, chequear por qué) */}
                     {edades.map((item, index) => {
-                      return <ConstructOption value={item} index={index} />;
+                      return <ConstructOption value={item} index={index} key={index}/>;
                     })}
                   </select>
                 </label>
@@ -321,8 +338,9 @@ class PagAdoptar extends Component {
                 <div className="container">
                   <div className="row">
                     {this.state.animales.map((item, index) => {
+                      console.log(item)
                       let isEdad =
-                        this.state.edad === item.edad ||
+                        this.state.edad.toLowerCase() === item.categoria_edad ||
                         this.state.edad === "Edad";
                       let isColor =
                         this.state.color.toLowerCase() === item.color ||
