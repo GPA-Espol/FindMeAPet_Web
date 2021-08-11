@@ -4,6 +4,11 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import {
+  MuiPickersUtilsProvider,
+  KeyboardDatePicker,
+} from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
 
 export default function AddressForm() {
   return (
@@ -17,9 +22,10 @@ export default function AddressForm() {
             required
             id="firstName"
             name="firstName"
-            label="First name"
+            label="Nombre"
             fullWidth
             autoComplete="given-name"
+            onChange={(event) => console.log(event.target.value)}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -27,12 +33,12 @@ export default function AddressForm() {
             required
             id="lastName"
             name="lastName"
-            label="Last name"
+            label="Apellido"
             fullWidth
             autoComplete="family-name"
           />
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sm={6}>
           <TextField
             required
             id="address1"
@@ -42,15 +48,24 @@ export default function AddressForm() {
             autoComplete="shipping address-line1"
           />
         </Grid>
-        <Grid item xs={12}>
-          <TextField
-            id="address2"
-            name="address2"
-            label="Address line 2"
-            fullWidth
-            autoComplete="shipping address-line2"
-          />
+        <Grid item xs={12} sm={6}>
+          <MuiPickersUtilsProvider utils={DateFnsUtils}>
+            
+              <KeyboardDatePicker
+                disableToolbar
+                variant="inline"
+                format="MM/dd/yyyy"
+                margin="normal"
+                id="date-picker-inline"
+                label="Date picker inline"
+                KeyboardButtonProps={{
+                  'aria-label': 'change date',
+                }}
+              />
+            
+          </MuiPickersUtilsProvider>
         </Grid>
+        
         <Grid item xs={12} sm={6}>
           <TextField
             required
@@ -84,12 +99,12 @@ export default function AddressForm() {
             autoComplete="shipping country"
           />
         </Grid>
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <FormControlLabel
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
             label="Use this address for payment details"
           />
-        </Grid>
+        </Grid> */}
       </Grid>
     </React.Fragment>
   );

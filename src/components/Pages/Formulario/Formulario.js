@@ -71,10 +71,13 @@ const useStyles = makeStyles((theme) => ({
         color: "#F5f5f5",
         backgroundColor: "#ea7a1e",
         fontWeight: "bold",
+        "&:hover": {
+          backgroundColor: "rgb(234, 122, 30)",
+        }
     },
 }));
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['Datos personales', 'Datos de hogar', 'Revisa tus datos'];
 
 function getStepContent(step) {
     switch (step) {
@@ -100,6 +103,7 @@ const muiTheme = createMuiTheme({
                 '&$completed': {
                     color: 'rgba(0, 0, 0, 0.38)',
                 },
+                
             },
         },
     }
@@ -123,7 +127,7 @@ const Formulario = () => {
         <main className={classes.layout}>
           <Paper className={classes.paper}>
             <Typography component="h1" variant="h4" align="center">
-              Checkout
+              Formulario de Adopción
             </Typography>
             <MuiThemeProvider theme={muiTheme}>
                 <Stepper activeStep={activeStep} className={classes.stepper}>
@@ -160,7 +164,7 @@ const Formulario = () => {
                       onClick={handleNext}
                       className={classes.button}
                     >
-                      {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                      {activeStep === steps.length - 1 ? 'Place order' : 'Siguiente'}
                     </Button>
                   </div>
                 </React.Fragment>
