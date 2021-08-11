@@ -18,12 +18,6 @@ class Donar extends Component {
             <div className="row mx-5">
               <p className="text-transparent fs-1">.</p>
             </div>
-            <div className="row mx-5">
-              <p className="text-transparent fs-1">.</p>
-            </div>
-            <div className="row mx-5">
-              <p className="text-transparent fs-1">.</p>
-            </div>
             <div className="row text-center mt-5 pt-5">
               <p className="fs-1 header-big text-white fw-bold">
                 ¡Haz una donación y alegra vidas!
@@ -31,9 +25,15 @@ class Donar extends Component {
             </div>
             <div className="row text-center text-white">
               <p className="fs-5 pb-3">
-                Gracias a personas solidarias como tú, hemos mantenido nuestra
-                labro a lo largo de los años
+                <i>Gracias a personas solidarias como tú, hemos mantenido nuestra
+                  labor a lo largo de los años.</i>
               </p>
+            </div>
+            <div className="row mx-5">
+              <p className="text-transparent fs-1">.</p>
+            </div>
+            <div className="row mx-5">
+              <p className="text-transparent fs-1">.</p>
             </div>
           </div>
         </section>
@@ -72,7 +72,7 @@ class Donar extends Component {
                   <div className="card-body row">
                     <div className="col-lg-4 py-2"><FontAwesomeIcon icon={faHome} color="#7C3C21" />{spaces}Prosperina</div>
                     <div className="col-lg-4 py-2"><FontAwesomeIcon icon={faHome} color="#7C3C21" />{spaces}Samanes</div>
-                    <div className="col-lg-4 py-2"><FontAwesomeIcon icon={faHome} color="#7C3C21" />{spaces}Orquideas</div>
+                    <div className="col-lg-4 py-2"><FontAwesomeIcon icon={faHome} color="#7C3C21" />{spaces}Orquídeas</div>
                     <div className="col-lg-4 py-2"><FontAwesomeIcon icon={faHome} color="#7C3C21" />{spaces}Sauces</div>
                     <div className="col-lg-4 py-2"><FontAwesomeIcon icon={faHome} color="#7C3C21" />{spaces}Villa España</div>
                   </div>
@@ -113,7 +113,7 @@ class Donar extends Component {
                             #1054049490<br/>
                             Mónica Santos Carrasco<br/>
                             C.I. 0927745232<br/>
-                            gpa.claudiapoppe@gmail.com<br/>
+                            <a href="mailto:gpa.claudiapoppe@gmail.com">gpa.claudiapoppe@gmail.com</a>{" "}
                         </p>
                       </div>
                   </div>

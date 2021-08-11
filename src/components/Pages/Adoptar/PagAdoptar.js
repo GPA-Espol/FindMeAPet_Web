@@ -17,6 +17,7 @@ let colores = [];
 const tipos = ["Gato", "Perro"];
 const sexo = ["Macho", "Hembra"];
 const edades = ["Gatito", "Adulto", "Mayor"];
+// const edades = ["Cachorro", "Juvenil", "Adulto"];
 
 /**
  * Construct and return an <option> HTML object with the value and index as params
@@ -191,11 +192,10 @@ class PagAdoptar extends Component {
                               01
                             </div>
                             <h5 className="font-size-16 pb-3 text-white text-start fw-bolder">
-                              Elige tu mascota ideal
+                              Elige a tu mascota ideal
                             </h5>
                             <p className="text-white text-start">
-                              Selecciona tu nuevo compañero en la sección de
-                              animales disponibles
+                              Selecciona a tu nuevo compañero en nuestro catálogo de animales disponibles.
                             </p>
                           </div>
                         </li>
@@ -208,8 +208,7 @@ class PagAdoptar extends Component {
                               Llena el formulario
                             </h5>
                             <p className="text-white text-start">
-                              Contesta las preguntas del formulario que nos
-                              permite conocerte un poco más
+                              ¡Contesta las preguntas de nuestro formulario para conocerte mejor!
                             </p>
                           </div>
                         </li>
@@ -222,8 +221,9 @@ class PagAdoptar extends Component {
                               Espera confirmación
                             </h5>
                             <p className="text-white text-start">
-                              Espera a que te contactemos para la entrega tu
-                              nuevo compañero de vida
+                              Espera a que te contactemos para la entrega de tu
+                              nuevo compañero de vida.<br/><br/>¡Quiérelo tanto como
+                              él definitivamente te querrá a tí!
                             </p>
                           </div>
                         </li>
@@ -245,7 +245,7 @@ class PagAdoptar extends Component {
           <div className="container pb-3">
             <div className="row">
               <div className="col-12 text-center mb-3">
-                <p className="text-coffee fs-3">1. Elige tu mascota ideal</p>
+                <p className="text-coffee fs-3">1. Elige a tu mascota ideal</p>
               </div>
             </div>
             <form onSubmit={this.handleSubmit}>
@@ -366,7 +366,7 @@ class PagAdoptar extends Component {
             <div className="row my-5">
               <div className="col-12 col-md-8">
                 <p className="fs-5 text-coffee mb-0 py-2 text-end">
-                  Recuerda revisar tus datos e ingresar información{" "}
+                  Haz click en un animalito y recuerda revisar tus datos e ingresar información{" "}
                   <strong>verídica</strong>
                 </p>
               </div>

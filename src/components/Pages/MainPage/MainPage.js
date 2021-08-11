@@ -102,7 +102,7 @@ const MainPage = () => {
                     </h5>
                     <p className="card-text fs-5 text-coffee">
                       Únete a nuestra organización y cuidemos juntos a nuestros
-                      animalitos del campus
+                      animalitos
                     </p>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ const MainPage = () => {
                       <CountUp end={136} duration={countDuration} />
                     </h5>
                     <p className="card-text fs-4 text-coffee">
-                      Gatos y Perros alrededor del campus tienen cuidados y
+                      Gatos y perros alrededor del campus reciben cuidado y
                       alimento día a día
                     </p>
                   </div>
@@ -164,7 +164,7 @@ const MainPage = () => {
                       />
                     </h5>
                     <p className="card-text fs-4 text-coffee">
-                      Manteniendo la lucha y cada vez haciéndolo de mejor
+                      Manteniendo la lucha y cada vez haciéndolo mejor
                     </p>
                   </div>
                 </div>
@@ -182,8 +182,10 @@ const MainPage = () => {
           <div className="row text-center fs-1">
             <p className="pb-4 text-white fw-bold">
               Todo lo que se ha logrado hasta el momento es gracias al gran
-              corazón de muchas personas que no nos abandonan, así como GPA no
-              pretende abandonar a las colonias felinas del campus
+              corazón de muchas personas que no nos abandonan. En
+              correspondencia, el Grupo de Protección Animal tiene como
+              compromiso nunca abandonar a las colonias felinas y caninas del
+              campus.
             </p>
             <p className="py-4"></p>
           </div>

@@ -31,12 +31,11 @@ class QuienesSomos extends Component {
               <div className="row justify-content-center">
                 <div className="col-10">
                   <p className="pb-4 text-coffee fs-5 text-justify fw-bold">
-                    GPA Claudia Poppe nace a partir de la necesidad de velar por
-                    los que no tienen voz, nuestros animalitos de ESPOL. Somos
-                    un grupo de personas comprometidas con el bienestar de los
-                    animales, principalmente por los que se encuentran dentro
-                    del Campus, promovemos la esterilización, la adopción, el
-                    cuidado y la tenencia responsable de mascotas.
+                    Grupo de Protección Animal (GPA) Claudia Poppe nace a partir de la necesidad de velar por
+                    los que no tienen voz, nuestros animalitos de ESPOL. Somos un grupo de personas
+                    comprometidas con el bienestar de los animales, principalmente por los que se encuentran
+                    dentro del campus. Promovemos la esterilización, la adopción, el cuidado y la tenencia
+                    responsable de mascotas.
                   </p>
                 </div>
               </div>
@@ -64,16 +63,16 @@ class QuienesSomos extends Component {
                   id="que-hacemos-list"
                 >
                   <li>
-                    <FontAwesomeIcon icon={faCheckCircle} color="orange" />
-                    {spaces6}Alimentamos a la fauna urbana de ESPOL
+                    <FontAwesomeIcon icon={faCheckCircle} color="#e35d26" />
+                    {spaces6}Alimentamos a la fauna urbana de ESPOL.
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faCheckCircle} color="orange" />
-                    {spaces6}Protegemos a los más indefensos del campus
+                    <FontAwesomeIcon icon={faCheckCircle} color="#e35d26" />
+                    {spaces6}Protegemos a los animalitos más indefensos del campus.
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faCheckCircle} color="orange" />
-                    {spaces6}Buscamos un hogar digno para ellos
+                    <FontAwesomeIcon icon={faCheckCircle} color="#e35d26" />
+                    {spaces6}Buscamos un hogar digno para ellos.
                   </li>
                 </ul>
               </div>
