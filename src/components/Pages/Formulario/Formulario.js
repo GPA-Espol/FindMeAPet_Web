@@ -12,8 +12,8 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
-import AddressForm from './AddressForm';
-import PaymentForm from './PaymentForm';
+import PersonalForm from './PersonalForm';
+import HomeCompromiseForm from './HomeCompromiseForm';
 import Review from './Review';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
@@ -77,14 +77,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const steps = ['Datos personales', 'Datos de hogar', 'Revisa tus datos'];
+const steps = ['Datos Personales', 'Datos de Hogar', 'Confirmación'];
 
 function getStepContent(step) {
     switch (step) {
       case 0:
-        return <AddressForm />;
+        return <PersonalForm />;
       case 1:
-        return <PaymentForm />;
+        return <HomeCompromiseForm />;
       case 2:
         return <Review />;
       default:
@@ -96,7 +96,6 @@ const muiTheme = createMuiTheme({
     overrides: {
         MuiStepIcon: {
             root: {
-                // color: '#FFF', // or 'rgba(0, 0, 0, 1)'
                 '&$active': {
                     color: '#ea7a1e',
                 },
