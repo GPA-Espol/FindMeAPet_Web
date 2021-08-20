@@ -16,10 +16,32 @@ import PersonalForm from './PersonalForm';
 import HomeCompromiseForm from './HomeCompromiseForm';
 import Review from './Review';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 
 export let FormData = {
     "animal" : undefined
 };
+
+function ModalPet() {
+  let selectedPet = FormData.animal;
+  return (
+    <React.Fragment>
+      <Typography variant="h6" gutterBottom>
+        Mascota escogida
+      </Typography>
+      <Grid container spacing={2}>
+        <img className="pet-image" src={selectedPet.imagen_url} alt="imagen mascota" />
+        <Grid item xs={12} sm={6}>
+          <Typography variant="h6" gutterBottom>
+          {selectedPet.nombre}
+          </Typography>
+          <Typography gutterBottom>{selectedPet.color}</Typography>
+          <Typography gutterBottom>{selectedPet.fecha_nacimiento}</Typography>
+        </Grid>
+      </Grid>
+    </React.Fragment>
+  );
+}
 
 function Copyright() {
     return (
@@ -86,7 +108,8 @@ function getStepContent(step) {
       case 1:
         return <HomeCompromiseForm />;
       case 2:
-        return <Review />;
+        // return <Review />;
+        return <ModalPet />
       default:
         throw new Error('Unknown step');
     }
@@ -142,11 +165,12 @@ const Formulario = () => {
               {activeStep === steps.length ? (
                 <React.Fragment>
                   <Typography variant="h5" gutterBottom>
-                    Thank you for your order.
+                    Gracias por llenar el registro de adopción.
                   </Typography>
                   <Typography variant="subtitle1">
-                    Your order number is #2001539. We have emailed your order confirmation, and will
-                    send you an update when your order has shipped.
+                    {/* Your order number is #2001539. We have emailed your order confirmation, and will
+                    send you an update when your order has shipped. */}
+                    Te hemos enviado un correo de confirmación y te estaremos contactando pronto.
                   </Typography>
                 </React.Fragment>
               ) : (
@@ -155,7 +179,7 @@ const Formulario = () => {
                   <div className={classes.buttons}>
                     {activeStep !== 0 && (
                       <Button onClick={handleBack} className={classes.button}>
-                        Back
+                        Atrás
                       </Button>
                     )}
                     <Button
@@ -163,7 +187,7 @@ const Formulario = () => {
                       onClick={handleNext}
                       className={classes.button}
                     >
-                      {activeStep === steps.length - 1 ? 'Place order' : 'Siguiente'}
+                      {activeStep === steps.length - 1 ? 'Confirmar' : 'Siguiente'}
                     </Button>
                   </div>
                 </React.Fragment>
@@ -172,7 +196,7 @@ const Formulario = () => {
           </Paper>
           {/* <Copyright /> */}
         </main>
-        <button onClick={() => console.log(FormData.animal)}>Print Animal</button>
+        {/* <button onClick={() => console.log(FormData.animal)}>Print Animal</button> */}
       </React.Fragment>
     );
   }

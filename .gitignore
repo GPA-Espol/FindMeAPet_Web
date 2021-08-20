@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# ChromeDriver.exe (algunos tienen para Windows, otros para Mac)
+selenium_test/chromedriver.exe

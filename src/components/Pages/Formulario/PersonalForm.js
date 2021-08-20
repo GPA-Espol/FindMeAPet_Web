@@ -12,8 +12,8 @@ import {
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 
-const estadosCiviles = ["Estado Civil" ,"Soltero/a", "Casado/a", "Divorciado/a"];
-const referencias = ["Referencia","Redes Sociales", "Mail masivo", "Publicidad impresa", "Referidos", "Otros"];
+const estadosCiviles = ["Estado Civil*" ,"Soltero/a", "Casado/a", "Divorciado/a", "Unión Libre", "Viudo/a"];
+const referencias = ["Referencia*","Redes Sociales", "Miembro GPA", "Publicidad impresa", "Referidos", "Otros"];
 
 export default class PersonalForm extends Component{
 
@@ -26,7 +26,6 @@ export default class PersonalForm extends Component{
   }
 
   handleChange = (event) => {
-    console.log(event);
     this.setState({
       [event.target.name]: event.target.value,
     });
