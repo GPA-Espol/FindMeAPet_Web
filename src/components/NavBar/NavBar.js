@@ -21,7 +21,7 @@ class NavBar extends Component {
           {/* <div className="nav-container"> */}
 
           <div className="logo-container">
-            <NavLink className="logo-img" exact to="/" className="nav-logo">
+            <NavLink className="logo-img nav-logo" exact to="/" alt="">
               <img className="logo-img" src="NavBar/LogoGPA_Navbar.png" alt="GPA Logo" />
             </NavLink>
           </div>

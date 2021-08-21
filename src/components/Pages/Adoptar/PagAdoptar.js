@@ -2,7 +2,6 @@
 
 import React, { Component } from "react";
 import "./PagAdoptar.css";
-// import { AnimalItems } from "../../../fakeBackEnd/animalsCatalog.js";
 import Button from "@material-ui/core/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeartbeat } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +14,6 @@ import { FormData } from "../Formulario/Formulario";
 let colores = [];
 const tipos = ["Gato", "Perro"];
 const sexo = ["Macho", "Hembra"];
-// const edades = ["Gatito", "Adulto", "Mayor"];
 const edades = ["Cachorro", "Juvenil", "Adulto"];
 
 /**
@@ -39,7 +37,7 @@ export const ConstructOption = ({ value, index }) => (
 export const ConstructAnimalCard = ({ item, index }) => {
 
   let categoriaEdad = item.categoria_edad.charAt(0).toUpperCase() + item.categoria_edad.slice(1);
-  let sexo = (item.sexo === 'M' ? 'Macho' : 'Hembra');
+  let sexoCard = (item.sexo === 'M' ? 'Macho' : 'Hembra');
   console.log(typeof item.categoria_edad)
 
 
@@ -59,12 +57,12 @@ export const ConstructAnimalCard = ({ item, index }) => {
           {/* <p className="hover-2-description text-uppercase mb-0"> */}
           <p className="hover-2-description mb-0">
             EDAD: {categoriaEdad} <br/> 
-            SEXO: {sexo} <br/><br/>
+            SEXO: {sexoCard} <br/><br/>
             DESCRIPCIÓN: <br/>
             {item.descripcion}. Conoce al nuevo miembro de tu familia.
           </p>
           {/* <img className="cat-image" src={item.imagen_url} alt="" /> */}
-          <img className="cat-image" src={item.imagen_url} onError={(e)=>{e.target.onerror = null; e.target.src="cat-placeholder.svg"}}/>
+          <img className="cat-image" src={item.imagen_url} alt="" onError={(e)=>{e.target.onerror = null; e.target.src="cat-placeholder.svg"}}/>
         </div>
       </div>
     </div>
@@ -129,7 +127,6 @@ class PagAdoptar extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
-    //console.log(props.state);
   }
 
   handleChange(event) {
@@ -274,7 +271,6 @@ class PagAdoptar extends Component {
                     <option value="Edad">
                       Edad
                     </option>
-                    {/* TODO: Hay un warning dice que necesita key (pero ya tiene, chequear por qué) */}
                     {edades.map((item, index) => {
                       return <ConstructOption value={item} index={index} key={index}/>;
                     })}

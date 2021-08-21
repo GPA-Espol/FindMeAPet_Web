@@ -4,7 +4,6 @@ import Button from "@material-ui/core/Button";
 import { Link } from 'react-router-dom';
 
 const ShowAnimal = (props) => {
-  // let funcion = funcion.funcion; 
   let selectedPet = props.pet;
   let disableModal = props.disableModalMethod;
 
@@ -25,7 +24,6 @@ const ShowAnimal = (props) => {
     }
 
     // TODO: Descomenta esto cuando este resuelto lo de los campos null
-    // let color = selectedPet.color.charAt(0).toUpperCase() + selectedPet.color.slice(1);
     let color = selectedPet.color;
     
     
