@@ -38,9 +38,6 @@ export const ConstructOption = ({ value, index }) => (
  */
 export const ConstructAnimalCard = ({ item, index }) => {
 
-  // TODO: Necesito sacar la edad y el sexo del animalito versión usuario
-  
-
   let categoriaEdad = item.categoria_edad.charAt(0).toUpperCase() + item.categoria_edad.slice(1);
   let sexo = (item.sexo === 'M' ? 'Macho' : 'Hembra');
   console.log(typeof item.categoria_edad)
@@ -66,7 +63,8 @@ export const ConstructAnimalCard = ({ item, index }) => {
             DESCRIPCIÓN: <br/>
             {item.descripcion}. Conoce al nuevo miembro de tu familia.
           </p>
-          <img className="cat-image" src={item.imagen_url} alt="Imagen del animalito" />
+          {/* <img className="cat-image" src={item.imagen_url} alt="" /> */}
+          <img className="cat-image" src={item.imagen_url} onError={(e)=>{e.target.onerror = null; e.target.src="cat-placeholder.svg"}}/>
         </div>
       </div>
     </div>
