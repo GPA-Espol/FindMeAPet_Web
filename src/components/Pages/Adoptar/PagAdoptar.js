@@ -11,10 +11,15 @@ import { FormData } from "../Formulario/Formulario";
 /**
  * Listas constantes (fake backend)
  */
-let colores = [];
+//TODO: Ver por qué está fallando la lógica de filtrado con estos colores.
+let colores = ["Blanco", "Negro", "Bicolor", "Calicó", "Gris", "Romano", "Naranja"];
 const tipos = ["Gato", "Perro"];
 const sexo = ["Macho", "Hembra"];
 const edades = ["Cachorro", "Juvenil", "Adulto"];
+
+
+
+
 
 /**
  * Construct and return an <option> HTML object with the value and index as params
