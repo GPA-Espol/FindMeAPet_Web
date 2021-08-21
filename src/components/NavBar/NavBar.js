@@ -21,8 +21,8 @@ class NavBar extends Component {
           {/* <div className="nav-container"> */}
 
           <div className="logo-container">
-            <NavLink exact to="/" className="nav-logo">
-              <img src="NavBar/logo_GPA_Horizontal.png" alt="GPA Logo" />
+            <NavLink className="logo-img" exact to="/" className="nav-logo">
+              <img className="logo-img" src="NavBar/LogoGPA_Navbar.png" alt="GPA Logo" />
             </NavLink>
           </div>
 
@@ -46,17 +46,18 @@ class NavBar extends Component {
 
             <div className="donar-button">
               <div className="donar-button-container">
-                <Button
-                  variant="contained"
-                  color="primary"
-                  style={{
-                    color: "#F5f5f5",
-                    backgroundColor: "#ea7a1e",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Donar
-                </Button>
+                <NavLink exact to="/donar">
+                  <Button
+                    variant="contained"
+                    style={{
+                      color: "#F5f5f5",
+                      backgroundColor: "#ea7a1e",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Donar
+                  </Button>
+                </NavLink>
               </div>
             </div>
           </ul>

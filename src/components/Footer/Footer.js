@@ -31,7 +31,7 @@ class Footer extends Component {
                 alt="GPA Logo"
                 className="card-img-top mb-4"
               />
-              <p className="text-coffee text-center">#AdoptaUnCorazon</p>
+              <p className="text-coffee text-center">#AdoptaUnCorazón</p>
               <div className="row row-cols-auto justify-content-center">
                 <div className="col">
                   <FontAwesomeIcon icon={faFacebookF} color="#7C3C21" />
@@ -45,28 +45,29 @@ class Footer extends Component {
               </div>
             </div>
             <div className="col text-coffee ps-5">
-              <p>EXPLORA OTROS LINKS</p>
-              <p>Quienes Somos</p>
-              <p>Adoptar</p>
-              <p>Ayúdanos</p>
+              <p>¡INVOLÚCRATE!</p>
+              <p className="footer-site-links">¿Quienés Somos?</p>
+              <p className="footer-site-links">Adopta un corazón</p>
+              <p className="footer-site-links">¡Únete a nosotros!</p>
             </div>
             <div className="col text-coffee ps-5">
               <p>CONTACTO</p>
               <p>
                 <FontAwesomeIcon icon={faLocationArrow} color="#7C3C21" />
-                {spaces6}Dirección
+                {spaces6}Dirección: xxxxxx
               </p>
               <p>
-                <FontAwesomeIcon icon={faPhone} color="#7C3C21" />
-                {spaces6}Telefono
+                <FontAwesomeIcon icon={faPhone} transform={{ rotate: 90 }} color="#7C3C21" />
+                {spaces6}Teléfono: xxxxxx 
               </p>
               <p>
                 <FontAwesomeIcon icon={faMailBulk} color="#7C3C21" />
-                {spaces6}Correo
+                {spaces6}Correo:      
+                <a href="mailto:gpa.claudiapoppe@gmail.com"> gpa.claudiapoppe@gmail.com</a>{" "}
               </p>
               <p>
                 <FontAwesomeIcon icon={faClock} color="#7C3C21" />
-                {spaces6}Horario
+                {spaces6}Horario: xxxxxx
               </p>
             </div>
           </div>

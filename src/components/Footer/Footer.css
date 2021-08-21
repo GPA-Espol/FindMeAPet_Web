@@ -1,3 +1,10 @@
 .footer-section {
   background-color: #F9C49A;
 }
+
+.footer-site-links:hover {
+  color: #ff8e32;
+  transition: all 0.5s; 
+  font-size: 1.02rem  ;
+  cursor: pointer;
+}
