@@ -7,6 +7,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeartbeat } from "@fortawesome/free-solid-svg-icons";
 import AnimalModal from "./AnimalModal/AnimalModal";
 import { FormData } from "../Formulario/Formulario";
+import Adapter from 'enzyme-adapter-react-16';
+import { configure } from 'enzyme';
+
+configure({ adapter: new Adapter() });
 
 /**
  * Listas constantes (fake backend)
@@ -27,8 +31,8 @@ const edades = ["Cachorro", "Juvenil", "Adulto"];
  * @param {number} index Index value for "key" attribute
  * @returns HTML object <option>
  */
-export const ConstructOption = ({ value, index }) => (
-  <option value={value} key={index}>
+export const ConstructOption = ({ value }) => (
+  <option value={value}>
     {value}
   </option>
 );
@@ -40,7 +44,7 @@ export const ConstructOption = ({ value, index }) => (
  * @returns Personalized HTML object with the image, description and name of item param
  */
 export const ConstructAnimalCard = ({ item, index }) => {
-
+  console.log(item);
   let categoriaEdad = item.categoria_edad.charAt(0).toUpperCase() + item.categoria_edad.slice(1);
   let sexoCard = (item.sexo === 'M' ? 'Macho' : 'Hembra');
   console.log(typeof item.categoria_edad)
@@ -159,9 +163,9 @@ class PagAdoptar extends Component {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const apiUrl = 'https://findmepet.herokuapp.com/mascota';
-    fetch(apiUrl)
+    await fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
         this.setState({animales: data})
@@ -276,8 +280,8 @@ class PagAdoptar extends Component {
                     <option value="Edad">
                       Edad
                     </option>
-                    {edades.map((item, index) => {
-                      return <ConstructOption value={item} index={index} key={index}/>;
+                    {edades.map((item) => {
+                      return <ConstructOption value={item}/>;
                     })}
                   </select>
                 </label>
@@ -292,8 +296,8 @@ class PagAdoptar extends Component {
                     <option value="Color" key="0">
                       Color
                     </option>
-                    {colores.map((item, index) => {
-                      return <ConstructOption value={item} index={index} />;
+                    {colores.map((item) => {
+                      return <ConstructOption value={item} />;
                     })}
                   </select>
                 </label>
@@ -307,8 +311,8 @@ class PagAdoptar extends Component {
                     <option value="Sexo" key="0">
                       Sexo
                     </option>
-                    {sexo.map((item, index) => {
-                      return <ConstructOption value={item} index={index} />;
+                    {sexo.map((item) => {
+                      return <ConstructOption value={item}/>;
                     })}
                   </select>
                 </label>
@@ -322,8 +326,8 @@ class PagAdoptar extends Component {
                     <option value="Tipo" key="0">
                       Tipo
                     </option>
-                    {tipos.map((item, index) => {
-                      return <ConstructOption value={item} index={index} />;
+                    {tipos.map((item) => {
+                      return <ConstructOption value={item} />;
                     })}
                   </select>
                 </label>
@@ -337,7 +341,6 @@ class PagAdoptar extends Component {
                 <div className="container">
                   <div className="row">
                     {this.state.animales.map((item, index) => {
-                      console.log(item)
                       let isEdad =
                         this.state.edad.toLowerCase() === item.categoria_edad ||
                         this.state.edad === "Edad";
